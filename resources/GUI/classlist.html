@@ -9,6 +9,23 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="custom/js/digital-clock.js"></script>
+	   <script type="text/javascript">
+		function newPage(classRoom) {
+		var name = document.getElementById("Username").innerHTML;
+		//var classRoom = document.getElementById("classRoom");
+		
+		var url = "https://demo.bigbluebutton.org/demo/create.jsp?username=" + name + "&meetingID=" + classRoom + "%27s+meeting&action=enter";
+		window.open(url);
+	}
+
+	function newCreate() {
+		
+		var classRoom = document.getElementById("classRoom");
+		var url ="https://demo.bigbluebutton.org/demo/create.jsp?username1=" + classRoom.value + "&action=create";
+		
+		window.open(url);
+	}
+	</script>
       <style>
          body {
          background: url('img/train-no-text.png') no-repeat center fixed; 
@@ -40,7 +57,7 @@
                </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Danh Nguyễn Viết</a></li>
+               <li><a href="#"><span class="glyphicon glyphicon-user"></span><p id="Username">Danh Nguyễn Viết</p></a></li>
                <li>
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                      <span class="glyphicon glyphicon-cog"></span>
@@ -75,12 +92,12 @@
                               <img src="img/brief-logo.png" class="img-rounded" >
                            </div>
                            <div class="col-md-9">
-                              <strong>Asking for and giving directions</strong><br>
+                              <strong>English 01</strong><br>
                               <i>11:00 30-11-2016</i><br>
-                              <strong>Giáo viên:</strong> Nguyễn Viết Danh
+                              <strong>Giáo viên:</strong> Hoàng Phương
                            </div>
                            <div class="col-md-2">
-                              <button type="button" class="btn btn-primary">Vào học</button>
+                              <button type="button" class="btn btn-primary" onclick="newPage('English 01')">Vào học</button>
                            </div>
                         </a>
                      </div>
@@ -153,10 +170,10 @@
                <div class="modal-body" style="padding:40px 50px;">
                   <form role="form">
                      <div class="form-group">
-                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nhập tên lớp</label>
-                        <input type="text" class="form-control" id="usrname" placeholder="Tên lớp">
+                        <label for="classRoom"><span class="glyphicon glyphicon-user"></span> Nhập tên lớp</label>
+                        <input type="text" class="form-control" placeholder="Tên lớp" id="classRoom" value="English 01">
                      </div>
-                     <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Tạo</button>
+                     <button type="submit" class="btn btn-success btn-block" Onclick="newCreate()"><span class="glyphicon glyphicon-off"></span> Tạo</button>
                   </form>
                </div>
                <div class="modal-footer">
