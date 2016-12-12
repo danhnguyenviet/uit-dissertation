@@ -28,19 +28,19 @@ public class MyDBAuthenticationService implements UserDetailsService {
             throw new UsernameNotFoundException("User " + username + " was not found in the database");
         }
          
-        // [USER,ADMIN,..]
+        // [SUBADMIN,ADMIN, TEACHER, STUDENT]
         List<String> roles= userInfoDAO.getUserRoles(username);
          
         List<GrantedAuthority> grantList= new ArrayList<GrantedAuthority>();
         if(roles!= null)  {
             for(String role: roles)  {
-                // ROLE_USER, ROLE_ADMIN,..
+                // ROLE_SUBMIN, ROLE_ADMIN, ROLE_TEACHER, ROLE_STUDENT
                 GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + role);
                 grantList.add(authority);
             }
         }        
          
-        UserDetails userDetails = (UserDetails) new User(userInfo.getUserName(), //
+        UserDetails userDetails = (UserDetails) new User(userInfo.getUsername(), //
                 userInfo.getPassword(),grantList);
  
         return userDetails;

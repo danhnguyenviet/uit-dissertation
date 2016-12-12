@@ -8,7 +8,7 @@ public interface UserInfoDAO {
      
     public UserInfo findUserInfo(String userName);
      
-    // [USER,AMIN,..]
+    // [Admin, Subadmin, Student, Teacher]
     public List<String> getUserRoles(String userName);
      
 }

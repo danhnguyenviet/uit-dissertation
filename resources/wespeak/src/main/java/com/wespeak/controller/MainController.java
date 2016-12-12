@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
  
-   @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
+   @RequestMapping(value = { "/", "/homeNotLogin" }, method = RequestMethod.GET)
    public String welcomePage(Model model) {
-       model.addAttribute("title", "Welcome");
-       model.addAttribute("message", "This is welcome page!");
-       return "welcomePage";
+       model.addAttribute("title", "WeSpeak | Trang chủ");
+       // model.addAttribute("message", "This is welcome page!");
+       return "homeNotLoginPage";
+   }
+   
+   @RequestMapping(value = "/home", method = RequestMethod.GET)
+   public String homePage(Model model) {
+       return "homePage";
    }
  
    @RequestMapping(value = "/admin", method = RequestMethod.GET)
@@ -24,14 +29,22 @@ public class MainController {
  
    @RequestMapping(value = "/login", method = RequestMethod.GET)
    public String loginPage(Model model ) {
-      
-       return "loginPage";
+	   model.addAttribute("title", "WeSpeak | Đăng nhập");
+	   
+	   return "loginPage";
+   }
+   
+   @RequestMapping(value = "/register", method = RequestMethod.GET)
+   public String registerPage(Model model ) {
+	   model.addAttribute("title", "WeSpeak | Đăng ký");
+	   
+	   return "registerPage";
    }
  
    @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
    public String logoutSuccessfulPage(Model model) {
-       model.addAttribute("title", "Logout");
-       return "logoutSuccessfulPage";
+       model.addAttribute("title", "WeSpeak | Trang chủ");
+       return "homeNotLoginPage";
    }
  
    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)

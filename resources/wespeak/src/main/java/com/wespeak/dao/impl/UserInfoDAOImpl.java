@@ -39,8 +39,9 @@ public class UserInfoDAOImpl extends JdbcDaoSupport implements UserInfoDAO {
  
  
     public List<String> getUserRoles(String userName) {
-        String sql = "Select r.User_Role "//
-                + " from User_Roles r where r.Username = ? ";
+        String sql = "Select r.UserGroupName "//
+                + " from usergroups r INNER JOIN users u ON r.UserGroupId=u.UserId "
+                + "where u.Username = ? ";
          
         Object[] params = new Object[] { userName };
          

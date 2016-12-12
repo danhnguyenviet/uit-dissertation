@@ -10,10 +10,10 @@ public class UserInfoMapper implements RowMapper<UserInfo> {
  
     public UserInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
  
-        String userName = rs.getString("Username");
+        String username = rs.getString("Username");
         String password = rs.getString("Password");
  
-        return new UserInfo(userName, password);
+        return new UserInfo(username, password);
     }
  
 }

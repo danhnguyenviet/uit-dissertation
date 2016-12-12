@@ -1,7 +1,10 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>WeSpeak | Trang chủ</title>
+      <title>${title}</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,18 +21,17 @@
       <nav class="navbar navbar-inverse">
          <div class="container-fluid">
             <div class="navbar-header">
-               <a class="navbar-brand" href="#">WeSpeak</a>
+               <a class="navbar-brand" href="/">WeSpeak</a>
             </div>
-            
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
-               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+               <li><a href="register"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+               <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
             </ul>
          </div>
       </nav>
 
       <div class="container">    
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+        <div id="loginbox" style="display:none; margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
                     <div class="panel-heading">
                         <div class="panel-title">Đăng nhập</div>
@@ -91,7 +93,7 @@
                         </div>                     
                     </div>  
         </div>
-        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="panel-title">Đăng ký</div>
@@ -169,7 +171,7 @@
                  </div>
             </div>
                 
-         </div> 
+         </div>  
     </div>
    </body>
 </html>
