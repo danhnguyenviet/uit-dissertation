@@ -46,13 +46,43 @@ public class MainController {
        model.addAttribute("title", "WeSpeak | Trang chủ");
        return "homeNotLoginPage";
    }
+   
+   //===== Start pronunciation =====
+   @RequestMapping(value = "/pronunciation", method = RequestMethod.GET)
+   public String pronunciationPage(Model model) {
+       model.addAttribute("title", "WeSpeak | Luyện phát âm");
+       
+       return "pronunciationPage";
+   }
+   
+   @RequestMapping(value = "/love", method = RequestMethod.GET)
+   public String lovePage(Model model) {
+       model.addAttribute("title", "WeSpeak | Love");
+       
+       return "lovePage";
+   }
+   
+   @RequestMapping(value = "/listenLevel1OfLove", method = RequestMethod.GET)
+   public String listenLevel1OfLovePage(Model model) {
+       model.addAttribute("title", "WeSpeak | Level 1: First date");
+       
+       return "listenLevel1OfLovePage";
+   }
+   
+   @RequestMapping(value = "/playLevel1OfLove", method = RequestMethod.GET)
+   public String playLevel1OfLovePage(Model model) {
+       model.addAttribute("title", "WeSpeak | Level 1: First date");
+       
+       return "playLevel1OfLovePage";
+   }
+   
+   //===== End pronunciation =====
  
    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
    public String userInfo(Model model, Principal principal) {
   
        // Sau khi user login thanh cong se co principal
        String userName = principal.getName();
- 
        System.out.println("User Name: "+ userName);
  
        return "userInfoPage";
