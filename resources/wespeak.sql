@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2016 at 10:16 AM
+-- Generation Time: Dec 24, 2016 at 04:08 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -50,6 +50,34 @@ CREATE TABLE IF NOT EXISTS `courseware` (
   `Author` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `NumOfView` int(11) NOT NULL,
   PRIMARY KEY (`CoursewareId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `evaluations`
+--
+
+CREATE TABLE IF NOT EXISTS `evaluations` (
+  `EvaluationId` int(11) NOT NULL AUTO_INCREMENT,
+  `EvaluationTypeId` int(11) NOT NULL,
+  `AssessorId` int(11) NOT NULL,
+  `StudentId` int(11) NOT NULL,
+  `Content` text COLLATE utf8_unicode_ci NOT NULL,
+  `CreatedDate` datetime NOT NULL,
+  PRIMARY KEY (`EvaluationId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `evaluationtypes`
+--
+
+CREATE TABLE IF NOT EXISTS `evaluationtypes` (
+  `EvaluationTypeId` int(11) NOT NULL AUTO_INCREMENT,
+  `EvaluationTypeName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`EvaluationTypeId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
