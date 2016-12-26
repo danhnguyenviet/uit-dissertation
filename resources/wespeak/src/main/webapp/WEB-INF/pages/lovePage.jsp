@@ -200,7 +200,7 @@ body {
 						<p><strong>Keywords:</strong> nervous, hurts, first date, concerned, alone, perfect.</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Play</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="redirectPlayLevel1();">Play</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="redirectListenLevel1();">Listen</button>
 					</div>
 				</div>
@@ -215,6 +215,10 @@ body {
 <script type="text/javascript">
 	function redirectListenLevel1() {
 		window.location = "${pageContext.request.contextPath}/listenLevel1OfLove";
+	}
+	
+	function redirectPlayLevel1() {
+		window.location = "${pageContext.request.contextPath}/playLevel1OfLove";
 	}
 </script>
 </html>
