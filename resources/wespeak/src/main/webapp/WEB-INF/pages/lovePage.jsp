@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.List"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,9 @@ body {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+			<%
+			List<Integer> levelPointsList = (List<Integer>) request.getAttribute("levelPointsList");
+			%>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title">Love</h3>
@@ -34,152 +38,62 @@ body {
 					<div class="panel-body">
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#level1Modal">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										1: First date<span class="badge pull-right">0/40</span>
+										<span class="pull-left">Level 1</span>First date<span class="badge pull-right"><%=levelPointsList.get(0)%>/ 70</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										7: The One
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 						<br>
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										2: Word stress
+										<span class="pull-left">Level 2</span>Word stress<span class="badge pull-right"><%=levelPointsList.get(1)%>/ 50</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										8: Word stress
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 						<br>
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										3: Early gets the girl
+										<span class="pull-left">Level 3</span>Early gets the girl<span class="badge pull-right"><%=levelPointsList.get(2)%>/ 50</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										9: Ocean eleven
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 						<br>
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										4: Sentence stress
+										<span class="pull-left">Level 4</span>Sentence stress<span class="badge pull-right"><%=levelPointsList.get(3)%>/ 90</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										10: Sentence stress
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 						<br>
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										5: Journey for two
+										<span class="pull-left">Level 5</span>Journey for two<span class="badge pull-right"><%=levelPointsList.get(4)%>/ 50</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										11: I promis you
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 						<br>
 						<div class="row">
 							<a href="#">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										6: You're not alone
+										<span class="pull-left">Level 6</span>You're not alone<span class="badge pull-right"><%=levelPointsList.get(5)%>/ 60</span>
 									</button>
 								</div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										12: Love hurts
-									</button>
-								</div>
-							</a>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-md-6">
-								<center>
-									<strong>Half way there!</strong>
-								</center>
-							</div>
-							<a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										13: FA forever alone
-									</button>
-								</div>
-							</a>
-						</div>
-						<br>
-						<div class="row">
-							<a href="#">
-								<div class="col-md-6"></div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										14: Purpose purpose purpose
-									</button>
-								</div>
-							</a>
-						</div>
-						<br>
-						<div class="row">
-							<a href="#">
-								<div class="col-md-6"></div>
-							</a> <a href="#">
-								<div class="col-md-6">
-									<button type="button" class="btn btn-primary btn-block">
-										<span class="glyphicon glyphicon-lock pull-left"></span> Level
-										15: Sorry, I am taken
-									</button>
-								</div>
-							</a>
+							</a> 
 						</div>
 					</div>
 				</div>

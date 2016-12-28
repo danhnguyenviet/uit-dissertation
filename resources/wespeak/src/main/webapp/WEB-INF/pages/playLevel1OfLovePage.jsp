@@ -217,7 +217,7 @@ body {
 			                     <div class="col-md-2"></div>
 			                     <div class="col-md-8">
 			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
-			                           id="text4Level1" style="font-size: 125%"> I am going on a <u>first</u>
+			                           id="text4Level1" style="font-size: 125%"> I am going on a <u>first</u> date tonight.
 			                        </span> <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
 			                  </div>
@@ -432,7 +432,6 @@ body {
 			                     <div class="col-md-8">
 			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
 			                           id="text8Level1" style="font-size: 125%"> But I'm <u>concerned</u> about knowing what to say when we are <u>alone</u>.
-			                        date tonight.
 			                        </span> <a href="javascript:void(0)" onclick="au8.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
 			                  </div>
@@ -610,7 +609,7 @@ body {
 			                     <div class="col-md-2">
 			                     </div>
 			                     <div class="col-md-2">
-			                        <button class="btn btn-primary" id="btnSeeYourResults" data-toggle="modal" data-target="#resultsModal" onclick="document.getElementById('levelPoints').innerHTML=point">See your results</button>
+			                        <button class="btn btn-primary" id="btnSeeYourResults" data-toggle="modal" data-target="" onclick="sendResults();">See your results</button>
 			                     </div>
 			                     <div class="col-md-2">
 			                     </div>
@@ -1302,6 +1301,27 @@ body {
 				}
 				p = 0;
 			}
+		}
+		
+		function sendResults() {
+			var username = '${username}';
+			var levelId = 1;
+			alert(username);
+			$.post("/wespeak/updateLevelPoints", {
+				username_c : username,
+				levelId_c : levelId,
+				point_c : point
+			})
+			.done(
+					function(data) {
+						alert("true");
+						window.location.href = "/wespeak/seeMyResults";
+					})
+			.fail(
+					function() {
+						alert("false");
+						
+					});
 		}
 		
 	</script>
