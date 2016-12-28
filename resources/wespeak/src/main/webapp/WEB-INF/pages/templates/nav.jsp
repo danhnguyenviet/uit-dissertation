@@ -24,7 +24,7 @@
 		</form>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-					Danh Nguyễn Viết</a></li>
+					${username}</a></li>
 			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-cog"></span>
 					<ul class="dropdown-menu">
