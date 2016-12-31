@@ -68,9 +68,11 @@ public class MainController {
        return "homeNotLoginPage";
    }
    
-   //===== Start pronunciation =====
+   //===== Begin of pronunciation =====
    @RequestMapping(value = "/pronunciation", method = RequestMethod.GET)
    public String pronunciationPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
        model.addAttribute("title", "WeSpeak | Luyện phát âm");
        
        return "pronunciationPage";
@@ -127,7 +129,47 @@ public class MainController {
 
 	   return new ModelAndView("redirect:/seeMyResults");
    }
-   //===== End pronunciation =====
+   //===== End of pronunciation =====
+   
+   //===== Begin of posts =====
+   @RequestMapping(value = "/posts", method = RequestMethod.GET)
+   public String postsPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Bài viết kinh nghiệm");
+       
+       return "postsPage";
+   }
+   
+   @RequestMapping(value = "/postDetail", method = RequestMethod.GET)
+   public String postDetailPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Xem bài viết kinh nghiệm");
+       
+       return "postDetailPage";
+   }
+   //===== End of posts =====
+   
+   //===== Begin of courseware =====
+   @RequestMapping(value = "/courseware", method = RequestMethod.GET)
+   public String coursewarePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Học liệu");
+       
+       return "coursewarePage";
+   }
+   
+   @RequestMapping(value = "/coursewareDetail", method = RequestMethod.GET)
+   public String coursewareDetailPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Chi tiết học liệu");
+       
+       return "coursewareDetailPage";
+   }
+   //===== End of courseware =====
  
    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
    public String userInfo(Model model, Principal principal) {

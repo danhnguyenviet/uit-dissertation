@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2016 at 04:08 AM
+-- Generation Time: Dec 31, 2016 at 06:44 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `classes` (
 
 CREATE TABLE IF NOT EXISTS `courseware` (
   `CoursewareId` int(11) NOT NULL AUTO_INCREMENT,
+  `CoursewareImagePath` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `CoursewareName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `Description` text COLLATE utf8_unicode_ci NOT NULL,
   `Active` int(11) NOT NULL,
@@ -92,7 +93,25 @@ CREATE TABLE IF NOT EXISTS `levels` (
   `TopicId` int(11) NOT NULL,
   `Points` int(11) NOT NULL,
   PRIMARY KEY (`LevelId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `levels`
+--
+
+INSERT INTO `levels` (`LevelId`, `LevelName`, `TopicId`, `Points`) VALUES
+(1, 'First date', 2, 70),
+(2, 'Word stress', 2, 50),
+(3, 'Early gets the girl', 2, 50),
+(4, 'Sentence stress', 2, 86),
+(5, 'Journey for two', 2, 50),
+(6, 'You''re not alone', 2, 60),
+(7, 'Welcome to the Euro 2016', 1, 60),
+(8, 'Welcome to the Euro 2016 (2)', 1, 50),
+(9, 'Intruduction to Euro 2016', 1, 70),
+(10, 'Soccer 101', 1, 80),
+(11, 'Road to the final', 1, 50),
+(12, 'Knockout phase', 1, 50);
 
 -- --------------------------------------------------------
 
@@ -109,6 +128,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `LastModifiedUserId` int(11) NOT NULL,
   `Modified` datetime NOT NULL,
   `BriefDescription` text COLLATE utf8_unicode_ci NOT NULL,
+  `PostImagePath` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`PostId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -124,7 +144,15 @@ CREATE TABLE IF NOT EXISTS `topics` (
   `Points` int(11) NOT NULL,
   `NumOfLevel` int(11) NOT NULL,
   PRIMARY KEY (`TopicId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `topics`
+--
+
+INSERT INTO `topics` (`TopicId`, `TopicName`, `Points`, `NumOfLevel`) VALUES
+(1, 'Euro Cup 2016', 360, 6),
+(2, 'Love', 370, 6);
 
 -- --------------------------------------------------------
 
@@ -193,7 +221,25 @@ CREATE TABLE IF NOT EXISTS `userscoredetails` (
   `Scores` int(11) NOT NULL,
   `UserScoreId` int(11) NOT NULL,
   PRIMARY KEY (`UserScoreDetailId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `userscoredetails`
+--
+
+INSERT INTO `userscoredetails` (`UserScoreDetailId`, `LevelId`, `Scores`, `UserScoreId`) VALUES
+(1, 1, 0, 1),
+(2, 2, 1, 1),
+(3, 3, 2, 1),
+(4, 4, 3, 1),
+(5, 5, 4, 1),
+(6, 6, 5, 1),
+(7, 7, 0, 1),
+(8, 8, 0, 1),
+(9, 9, 0, 1),
+(10, 10, 0, 1),
+(11, 11, 0, 1),
+(12, 12, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -206,7 +252,17 @@ CREATE TABLE IF NOT EXISTS `userscores` (
   `UserId` int(11) NOT NULL,
   `Scores` int(11) NOT NULL,
   PRIMARY KEY (`UserScoreId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `userscores`
+--
+
+INSERT INTO `userscores` (`UserScoreId`, `UserId`, `Scores`) VALUES
+(1, 1, 0),
+(2, 2, 0),
+(3, 3, 0),
+(4, 4, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
