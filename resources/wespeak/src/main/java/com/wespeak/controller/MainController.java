@@ -140,9 +140,18 @@ public class MainController {
        
        return "postsPage";
    }
+   
+   @RequestMapping(value = "/postDetail", method = RequestMethod.GET)
+   public String postDetailPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Xem bài viết kinh nghiệm");
+       
+       return "postDetailPage";
+   }
    //===== End of posts =====
    
-   //===== Begin of posts =====
+   //===== Begin of courseware =====
    @RequestMapping(value = "/courseware", method = RequestMethod.GET)
    public String coursewarePage(Model model) {
 	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -151,7 +160,16 @@ public class MainController {
        
        return "coursewarePage";
    }
-   //===== End of posts =====
+   
+   @RequestMapping(value = "/coursewareDetail", method = RequestMethod.GET)
+   public String coursewareDetailPage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+       model.addAttribute("title", "WeSpeak | Chi tiết học liệu");
+       
+       return "coursewareDetailPage";
+   }
+   //===== End of courseware =====
  
    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
    public String userInfo(Model model, Principal principal) {

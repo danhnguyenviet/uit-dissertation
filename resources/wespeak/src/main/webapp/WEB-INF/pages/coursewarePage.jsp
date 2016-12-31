@@ -30,7 +30,33 @@
 	               <div class="row">
 	                  <div class="col-md-3">
 	                     <div class="thumbnail">
-	                        <a href=""><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
+	                        <a href="coursewareDetail"><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
+	                        <div class="caption">
+	                           <a href="coursewareDetail">
+	                              <h4>Do you speak English?</h4>
+	                           </a>
+	                           <p><span class="glyphicon glyphicon-user"></span> Guy Dickson</p>
+	                           <p><span class="glyphicon glyphicon-upload"></span> Nguyễn Viết Danh</p>
+	                           <p><span class="glyphicon glyphicon-eye-open"></span> 28 lượt đọc</p>
+	                        </div>
+	                     </div>
+	                  </div>
+	                  <div class="col-md-3">
+	                     <div class="thumbnail">
+	                        <a href="coursewareDetail"><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
+	                        <div class="caption">
+	                           <a href="coursewareDetail">
+	                              <h4>Do you speak English?</h4>
+	                           </a>
+	                           <p><span class="glyphicon glyphicon-user"></span> Guy Dickson</p>
+	                           <p><span class="glyphicon glyphicon-upload"></span> Nguyễn Viết Danh</p>
+	                           <p><span class="glyphicon glyphicon-eye-open"></span> 28 lượt đọc</p>
+	                        </div>
+	                     </div>
+	                  </div>
+	                  <div class="col-md-3">
+	                     <div class="thumbnail">
+	                        <a href="coursewareDetail"><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
 	                        <div class="caption">
 	                           <a href="read-courseware.html">
 	                              <h4>Do you speak English?</h4>
@@ -43,33 +69,7 @@
 	                  </div>
 	                  <div class="col-md-3">
 	                     <div class="thumbnail">
-	                        <a href=""><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
-	                        <div class="caption">
-	                           <a href="read-courseware.html">
-	                              <h4>Do you speak English?</h4>
-	                           </a>
-	                           <p><span class="glyphicon glyphicon-user"></span> Guy Dickson</p>
-	                           <p><span class="glyphicon glyphicon-upload"></span> Nguyễn Viết Danh</p>
-	                           <p><span class="glyphicon glyphicon-eye-open"></span> 28 lượt đọc</p>
-	                        </div>
-	                     </div>
-	                  </div>
-	                  <div class="col-md-3">
-	                     <div class="thumbnail">
-	                        <a href=""><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
-	                        <div class="caption">
-	                           <a href="read-courseware.html">
-	                              <h4>Do you speak English?</h4>
-	                           </a>
-	                           <p><span class="glyphicon glyphicon-user"></span> Guy Dickson</p>
-	                           <p><span class="glyphicon glyphicon-upload"></span> Nguyễn Viết Danh</p>
-	                           <p><span class="glyphicon glyphicon-eye-open"></span> 28 lượt đọc</p>
-	                        </div>
-	                     </div>
-	                  </div>
-	                  <div class="col-md-3">
-	                     <div class="thumbnail">
-	                        <a href=""><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
+	                        <a href="coursewareDetail"><img src="img/hoc-tieng-anh-giao-tiep.png"></a>
 	                        <div class="caption">
 	                           <a href="read-courseware.html">
 	                              <h4>Do you speak English?</h4>

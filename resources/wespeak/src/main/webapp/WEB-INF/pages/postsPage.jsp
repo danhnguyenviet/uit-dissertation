@@ -29,50 +29,50 @@
                   <div class="panel-body">
                      <div class="row">
                         <div class="col-md-3">
-                           <a href="#"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
+                           <a href="postDetail"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
                         </div>
                         <div class="col-md-19">
-                           <a href="#"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
+                           <a href="postDetail"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
                            <p>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết: Xem các mẫu câu nói giao tiếp thông dụng hàng ngày (sử dụng ngôn ngữ nói) trong môi trường bạn bè và gia đình.</p>
                         </div>
                      </div>
                      <hr>
                      <div class="row">
                         <div class="col-md-3">
-                           <a href="#"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
+                           <a href="postDetail"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
                         </div>
                         <div class="col-md-19">
-                           <a href="#"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
+                           <a href="postDetail"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
                            <p>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết: Xem các mẫu câu nói giao tiếp thông dụng hàng ngày (sử dụng ngôn ngữ nói) trong môi trường bạn bè và gia đình.</p>
                         </div>
                      </div>
                      <hr>
                      <div class="row">
                         <div class="col-md-3">
-                           <a href="#"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
+                           <a href="postDetail"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
                         </div>
                         <div class="col-md-19">
-                           <a href="#"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
+                           <a href="postDetail"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
                            <p>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết: Xem các mẫu câu nói giao tiếp thông dụng hàng ngày (sử dụng ngôn ngữ nói) trong môi trường bạn bè và gia đình.</p>
                         </div>
                      </div>
                      <hr>
                      <div class="row">
                         <div class="col-md-3">
-                           <a href="#"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
+                           <a href="postDetail"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
                         </div>
                         <div class="col-md-19">
-                           <a href="#"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
+                           <a href="postDetail"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
                            <p>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết: Xem các mẫu câu nói giao tiếp thông dụng hàng ngày (sử dụng ngôn ngữ nói) trong môi trường bạn bè và gia đình.</p>
                         </div>
                      </div>
                      <hr>
                      <div class="row">
                         <div class="col-md-3">
-                           <a href="#"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
+                           <a href="postDetail"><img src="img/50-cau-tieng-anh-giao-tiep-1.png" class="img-rounded"></a>
                         </div>
                         <div class="col-md-19">
-                           <a href="#"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
+                           <a href="postDetail"><strong>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</strong></a><br>
                            <p>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết: Xem các mẫu câu nói giao tiếp thông dụng hàng ngày (sử dụng ngôn ngữ nói) trong môi trường bạn bè và gia đình.</p>
                         </div>
                      </div>
@@ -90,11 +90,11 @@
                      <div class="row">
                         <div class = "col-sm-12 col-md-12">
                            <div class = "thumbnail">
-                              <a href="#"><img src = "img/50-cau-tieng-anh-giao-tiep-1.png" alt = "50 câu tiếng anh giao tiếp"></a>
+                              <a href="postDetail"><img src = "img/50-cau-tieng-anh-giao-tiep-1.png" alt = "50 câu tiếng anh giao tiếp"></a>
                            </div>
                            
                            <div class = "caption">
-                              <a href="#"><h4>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</h4></a>
+                              <a href="postDetail"><h4>50 câu tiếng anh giao tiếp thông dụng hàng ngày bạn nên biết</h4></a>
                            </div>
 
                            <div class = "thumbnail">
