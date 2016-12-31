@@ -10,9 +10,9 @@
 			<li><a href="classlist">Lớp đang học</a></li>
 			<li><a href="pronunciation">Luyện phát âm</a></li>
 			<li><a href="courseware">Học liệu</a></li>
-			<li><a href="news">Bài viết</a></li>
+			<li><a href="posts">Bài viết</a></li>
 		</ul>
-		<form class="navbar-form navbar-left">
+		<!-- <form class="navbar-form navbar-left">
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="Tìm kiếm">
 				<div class="input-group-btn">
@@ -21,7 +21,7 @@
 					</button>
 				</div>
 			</div>
-		</form>
+		</form>  -->
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 					${username}</a></li>
