@@ -19,10 +19,16 @@ import org.springframework.web.servlet.ModelAndView;
 import com.wespeak.dao.UserInfoDAO;
 import com.wespeak.dao.impl.UserInfoDAOImpl;
 import com.wespeak.model.PronunciationResultsModel;
+import com.wespeak.dao.ClassListDAO;
+import com.wespeak.dao.UserDAO;
+import com.wespeak.model.ClassList;
  
 @Controller
 public class MainController {
-	
+	@Autowired
+	private ClassListDAO classListDAO;
+	@Autowired
+	private UserDAO userDAO;
 	@Autowired
     private UserInfoDAO userInfoDAO;
  
@@ -193,4 +199,17 @@ public class MainController {
        }
        return "403Page";
    }
+   
+	@RequestMapping(value = "/classList", method = RequestMethod.GET)
+	public String ClassList(Model model, Principal principal) {
+		List<ClassList> list = classListDAO.listClassList();
+		model.addAttribute("classModel", list);
+		model.addAttribute("name", principal.getName());
+		int as = userDAO.userGroup(principal.getName());
+		model.addAttribute("groupUser", as);
+		
+		model.addAttribute("title", "Danh sách lớp");
+		
+		return "classlistPage";
+	}
 }

@@ -7,7 +7,7 @@
 		</div>
 		<ul class="nav navbar-nav">
 			<li><a href="home">Trang chủ</a></li>
-			<li><a href="classlist">Lớp đang học</a></li>
+			<li><a href="classList">Lớp đang học</a></li>
 			<li><a href="pronunciation">Luyện phát âm</a></li>
 			<li><a href="courseware">Học liệu</a></li>
 			<li><a href="posts">Bài viết</a></li>
