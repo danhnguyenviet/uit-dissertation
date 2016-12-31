@@ -202,6 +202,9 @@ public class MainController {
    
 	@RequestMapping(value = "/classList", method = RequestMethod.GET)
 	public String ClassList(Model model, Principal principal) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		
 		List<ClassList> list = classListDAO.listClassList();
 		model.addAttribute("classModel", list);
 		model.addAttribute("name", principal.getName());

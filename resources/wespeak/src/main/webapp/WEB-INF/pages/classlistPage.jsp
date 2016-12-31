@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
 <script src="custom/js/digital-clock.js"></script>
 <script type="text/javascript">
 	function newPage(classRoom) {
-		var username = document.getElementById("Username").innerHTML;
+		var username = document.getElementById("userName").innerHTML;
 		var userGroup = document.getElementById("userGroup").innerHTML;
 		var url;
 		if (userGroup == 4)
@@ -33,7 +33,7 @@
 	function newCreate() {
 
 		var classRoomName = document.getElementById("classRoom").value;
-		var username = document.getElementById("Username").innerHTML;
+		var username = document.getElementById("userName").innerHTML;
 		var url = "http://125.253.123.33/demo/demo_create.jsp?username="
 				+ username + "&classname=" + classRoomName + "&password="
 				+ "prof123" + "&action=create";
@@ -49,43 +49,7 @@ body {
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">WeSpeak</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="home.html">Trang chủ</a></li>
-				<li class="active"><a href="#">Lớp đang học</a></li>
-				<li><a href="#">Luyện phát âm</a></li>
-				<li><a href="#">Học liệu</a></li>
-				<li><a href="#">Bài viết</a></li>
-			</ul>
-			<form class="navbar-form navbar-left">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search">
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-							<i class="glyphicon glyphicon-search"></i>
-						</button>
-					</div>
-				</div>
-			</form>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-						<p id="Username">${name}</p></a></li>
-				<div id="userGroup" class="hidden">${groupUser}</div>
-				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-cog"></span>
-						<ul class="dropdown-menu">
-							<li><a href="#">Thông tin cơ bản</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Thoát</a></li>
-						</ul>
-				</a></li>
-			</ul>
-		</div>
-	</nav>
+	<%@ include file="../pages/templates/nav.jsp"%>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2">
@@ -106,8 +70,7 @@ body {
 									<div class="col-md-1">
 										<img src="img/brief-logo.png" class="img-rounded">
 									</div>
-									<div class="col-md-1">
-									</div>
+									
 									<div class="col-md-9">
 										<strong>${dept.className}</strong><br> <i>${dept.startDate}-${dept.endDate}</i><br>
 										<strong>Giáo viên:</strong> ${dept.fullName}
@@ -134,7 +97,8 @@ body {
 			</div>
 		</div>
 	</div>
-
+<div id="userGroup" class="hidden">${groupUser }</div>
+<div id="userName" class="hidden">${name }</div>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
