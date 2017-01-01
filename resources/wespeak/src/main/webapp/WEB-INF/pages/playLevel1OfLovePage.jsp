@@ -3,17 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>${title}</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<%@include file="../pages/templates/head.jsp"%>
 <style>
 body {
 	background: url('img/train-no-text.png') no-repeat center fixed;
@@ -36,7 +26,7 @@ body {
 	visibility: hidden;
 }
 </style>
-</head>
+
 <body>
 	<%@include file="../pages/templates/nav.jsp"%>
 
@@ -115,21 +105,21 @@ body {
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-2">
-										<a href="#" class="button disabled one" id="play"> <span
-											class="pull-left"> <img src="img/speakIcon.png"
+										<button class="button disabled one" id="play"> <span
+											class="pull-left"> <img src="img/speakerIcon.png"
 												alt="user speaks" style="width: 20%">
-										</span></a>
+										</span></button>
 									</div>
 									<div class="col-md-2">
-										<button class="" id="start_button_1"
+										<button class="button recordButton" id="start_button_1 record"
 											onclick="startButton_1(event)">
 											<img id="start_img_1" src="img/mic.gif" alt="record" style="width: 60%">
 										</button>
 									</div>
 									<div class="col-md-2">
-										<a href="javascript:void(0)" onclick="showScreen('screen_2'); showInfo_2('info_start_2')"> <img
-											src="img/nextIcon.png" alt="next" style="width: 20%">
-										</a>
+										<button onclick="showScreen('screen_2'); showInfo_2('info_start_2')"> <img
+											src="img/newNextIcon.png" alt="next" style="width: 20%">
+										</button>
 									</div>
 									<div class="col-md-3"></div>
 								</div>
@@ -225,10 +215,10 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_2"
@@ -237,9 +227,9 @@ body {
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_3'); showInfo_3('info_start_3')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_3'); showInfo_3('info_start_3')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -332,10 +322,10 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_3"
@@ -344,9 +334,9 @@ body {
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_4'); showInfo_4('info_start_4')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_4'); showInfo_4('info_start_4')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -439,10 +429,10 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_4"
@@ -451,9 +441,9 @@ body {
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_5'); showInfo_5('info_start_5')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_5'); showInfo_5('info_start_5')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -546,10 +536,10 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_5"
@@ -558,9 +548,9 @@ body {
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_6');"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_6');"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>

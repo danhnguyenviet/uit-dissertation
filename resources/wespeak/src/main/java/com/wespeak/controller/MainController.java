@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.wespeak.dao.UserInfoDAO;
-import com.wespeak.dao.impl.UserInfoDAOImpl;
 import com.wespeak.model.PronunciationResultsModel;
  
 @Controller
