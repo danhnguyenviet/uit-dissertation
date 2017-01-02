@@ -14,6 +14,8 @@ public interface UserInfoDAO {
     
     public List<Integer> getLevelPointsList(String username);
     
-    public void savePronuncitaionResults(PronunciationResultsModel prm);
+    public boolean updatePronuncitaionResults(PronunciationResultsModel prm);
+    
+    public Integer getTotalPoints(Integer userId);
      
 }

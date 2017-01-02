@@ -11,12 +11,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.wespeak.dao.UserInfoDAO;
+import com.wespeak.model.MyResultsModel;
 import com.wespeak.model.PronunciationResultsModel;
  
 @Controller
@@ -101,33 +103,45 @@ public class MainController {
    public String playLevel1OfLovePage(Model model) {
 	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
        model.addAttribute("title", "WeSpeak | Level 1: First date");
        
        return "playLevel1OfLovePage";
    }
    
+   @RequestMapping(value="/updateLevelPoints", method = RequestMethod.POST)
+   public String updateProductInfo(Model model, HttpServletRequest request,
+			@RequestParam(value = "userId_c") Integer userId_c,
+			@RequestParam(value = "levelId_c") Integer levelId_c,
+			@RequestParam(value = "point_c") Integer point_c,
+			RedirectAttributes rAttr,
+			HttpServletResponse response) throws Exception {
+	   
+	   PronunciationResultsModel prm = new PronunciationResultsModel(userId_c, levelId_c, point_c);
+	   try {
+		   userInfoDAO.updatePronuncitaionResults(prm);
+	   } catch (Exception e) {
+		   System.out.println("My error: " + e);
+	   }
+	   rAttr.addFlashAttribute("levelPoints", point_c);
+	   rAttr.addFlashAttribute("totalPoints", userInfoDAO.getTotalPoints(userId_c));
+	   System.out.println("Danh Nguyen " + userId_c + " " + levelId_c + " " + point_c + " " + userInfoDAO.getTotalPoints(userId_c));
+	   
+	   return "redirect:seeMyResultsPage";
+   }
+
    @RequestMapping(value = "/seeMyResults", method = RequestMethod.GET)
-   public String seeMyResults(Model model) {
+   public String seeMyResults(Model model, @ModelAttribute("levelPoints") Integer levelPoints, @ModelAttribute("totalPoints") Integer totalPoints) {
 	   
 	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	   model.addAttribute("username", auth.getName());
-	   
+	   model.addAttribute("levelPoints", levelPoints);
+	   model.addAttribute("totalPoints", totalPoints);
 	   model.addAttribute("title", "WeSpeak | Kết quả của bạn");
 	   
        return "seeMyResultsPage";
    }
    
-   @RequestMapping(value="/updateLevelPoints", method=RequestMethod.POST)
-   public ModelAndView updateLevelPoints(Model model, HttpServletRequest request, HttpServletResponse response,
-		   @RequestParam(value = "username") String username_c, 
-		   @RequestParam(value = "levelId") Integer levelId_c,
-		   @RequestParam(value = "point") Integer point_c) throws Exception {
-	   
-	   PronunciationResultsModel prm = new PronunciationResultsModel(username_c, levelId_c, point_c);
-	   userInfoDAO.savePronuncitaionResults(prm);
-
-	   return new ModelAndView("redirect:/seeMyResults");
-   }
    //===== End of pronunciation =====
    
    //===== Begin of posts =====

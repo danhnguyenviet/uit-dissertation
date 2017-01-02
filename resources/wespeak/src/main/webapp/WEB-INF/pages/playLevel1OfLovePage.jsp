@@ -645,7 +645,7 @@ body {
 			</div>
 		</div>
 		</div>
-
+		
 	</div>
 	<audio id="l1Audio1" src="voices/love.level1/level1.1.mp3"></audio>
 	<audio id="l1Audio2" src="voices/love.level1/level1.2.mp3"></audio>
@@ -1294,24 +1294,45 @@ body {
 		}
 		
 		function sendResults() {
-			var username = '${username}';
+			var userId = '${userInfo.getUserId()}';
 			var levelId = 1;
-			alert(username);
-			$.post("/wespeak/updateLevelPoints", {
-				username_c : username,
+			/*
+			var data = {};
+			data["userId"] = userId;
+			data["levelId"] = userId;
+			data["point"] = point; */
+			
+			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
+				userId_c : userId,
 				levelId_c : levelId,
 				point_c : point
 			})
 			.done(
 					function(data) {
-						alert("true");
-						window.location.href = "/wespeak/seeMyResults";
+						//alert("true " + userId + " " + levelId + " " + point);
+						//window.location = "${pageContext.request.contextPath}/seeMyResults";
 					})
 			.fail(
 					function() {
-						alert("false");
-						
+						//alert("false " + userId + " " + levelId + " " + point);
+						//window.location = "${pageContext.request.contextPath}/seeMyResults";
 					});
+			
+			/*
+			$.ajax({
+	             type: "POST",
+	             contentType: "application/json",
+	             url: "${pageContext.request.contextPath}/updateLevelPoints",
+	             data: JSON.stringify(data),
+	             dataType: 'json',
+	             timeout: 600000,
+	             success: function (data) {
+	            	 alert("true " + userId + " " + levelId + " " + point);
+	             },
+	             error: function (e) {
+	            	 alert("false " + userId + " " + levelId + " " + point);
+	             }
+			}); */
 		}
 		
 	</script>
