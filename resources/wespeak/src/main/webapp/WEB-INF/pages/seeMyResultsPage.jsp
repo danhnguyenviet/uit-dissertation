@@ -26,8 +26,8 @@ body {
 							<div class="col-md-12">
 								<center>
 									<img alt="brief-logo" src="img/brief-logo.png">
-									<h2>Level points: <b>${lPoints}</b>/ 70</h2>
-									<h2>Total points: <b>${tPoints}</b>/ 730</h2>
+									<h2>Level points: <b>${mrm.getLevelPoints()}</b>/ 70</h2>
+									<h2>Total points: <b>${mrm.getTotalPoints()}</b>/ 730</h2>
 								</center>
 							</div>
 						</div>
@@ -35,8 +35,8 @@ body {
 						<div class="row">
 							<div class="col-md-12">
 								<center>
-									<button class="btn btn-primary" id="btnPlayAgain">Play again</button>&nbsp;&nbsp;
-									<button class="btn btn-primary" id="btnReturnLevel">Return the level</button>
+									<button class="btn btn-primary" id="btnPlayAgain" onclick="redirectPlayLevel1();">Play again</button>&nbsp;&nbsp;
+									<button class="btn btn-primary" id="btnReturnLevel" onclick="redirectListenLevel1();">Return the level</button>
 								</center>
 							</div>
 						</div>
@@ -73,7 +73,7 @@ body {
 </body>
 <script type="text/javascript">
 	function redirectListenLevel1() {
-		window.location = "${pageContext.request.contextPath}/listenLevel1OfLove";
+		window.location = "${pageContext.request.contextPath}/love";
 	}
 	
 	function redirectPlayLevel1() {
