@@ -43,14 +43,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				"/homeNotLogin",
 				"/register").permitAll();
 
-		// Trang /userInfo yêu cầu phải login với vai trò USER hoặc ADMIN.
 		// Nếu chưa login, nó sẽ redirect tới trang /login.
 		http.authorizeRequests().antMatchers(
 				"/home",
 				"/classList",
 				"/pronunciation",
 				"/courseware",
-				"/posts").access("hasAnyRole('ROLE_TEACHER', 'ROLE_STUDENT', 'ROLE_SUBADMIN', 'ROLE_ADMIN')");
+				"/posts",
+				"/love",
+				"/playLevel1OfLove",
+				"/listenLevel1OfLove",
+				"/seeMyResults").access("hasAnyRole('ROLE_TEACHER', 'ROLE_STUDENT', 'ROLE_SUBADMIN', 'ROLE_ADMIN')");
 
 		// For ADMIN only.
 		// Trang chỉ dành cho ADMIN

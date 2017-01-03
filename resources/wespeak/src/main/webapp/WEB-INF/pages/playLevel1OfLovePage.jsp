@@ -1310,12 +1310,12 @@ body {
 			.done(
 					function(data) {
 						//alert("true " + userId + " " + levelId + " " + point);
-						//window.location = "${pageContext.request.contextPath}/seeMyResults";
+						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					})
 			.fail(
 					function() {
 						//alert("false " + userId + " " + levelId + " " + point);
-						//window.location = "${pageContext.request.contextPath}/seeMyResults";
+						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					});
 			
 			/*

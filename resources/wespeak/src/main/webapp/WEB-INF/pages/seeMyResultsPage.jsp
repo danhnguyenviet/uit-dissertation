@@ -1,7 +1,5 @@
-<%@page import="com.wespeak.model.MyResultsModel"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.wespeak.model.MyResultsModel"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,14 +24,11 @@ body {
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-md-12">
-							
-								
-									<center>
-										<img alt="brief-logo" src="img/brief-logo.png">
-										<h2>Level points: <b>${levelPoints}</b>/ 70</h2>
-										<h2>Total points: <b>${totalPoints}</b>/ 730</h2>
-									</center>
-									
+								<center>
+									<img alt="brief-logo" src="img/brief-logo.png">
+									<h2>Level points: <b>${lPoints}</b>/ 70</h2>
+									<h2>Total points: <b>${tPoints}</b>/ 730</h2>
+								</center>
 							</div>
 						</div>
 						<br>
