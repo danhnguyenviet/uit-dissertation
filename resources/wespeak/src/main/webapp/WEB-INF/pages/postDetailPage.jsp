@@ -31,35 +31,12 @@
 	                  <div class="col-md-12">
 	                     <div class="textfull">
 	                        <h2>
-	                           <span class="font-arial">50 câu tiếng anh giao tiếp thông dụng</span>
+	                           <span class="font-arial">${postModel.title}</span>
 	                        </h2>
 	                        <hr>
 	                        <p>
-	                           <span class="font-arial">1. What's up? - Có chuyện gì vậy? </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">2. How's it going? - Dạo này ra sao rồi? </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">3. What have you been doing? - Dạo này đang làm gì? </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">4. Nothing much. - Không có gì mới cả. </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">5. What's on your mind? - Bạn đang lo lắng gì vậy? </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">6. I was just thinking. - Tôi chỉ nghĩ linh tinh thôi.</span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">7. I was just daydreaming. - Tôi chỉ đãng trí đôi chút thôi. </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">8. It's none of your business. - Không phải là chuyện của bạn. </span>
-	                           <br>
-	                           <br>
-	                           <span class="font-arial">9. Is that so? - Vậy hả? </span>
+	                           <span class="font-arial">${postModel.content}</span>
+	                          
 	                           <span class="font-arial"></span>
 	                        </p>
 	                        <p>
