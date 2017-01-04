@@ -24,8 +24,7 @@ public class UserInfoDAOImpl extends JdbcDaoSupport implements UserInfoDAO {
 	}
 
 	public UserInfo findUserInfo(String userName) {
-		// String sql = "Select u.Username,u.Password "//
-		// + " from Users u where u.Username = ? ";
+		
 		String sql = "Select * "//
 				+ " from Users u where u.Username = ? ";
 

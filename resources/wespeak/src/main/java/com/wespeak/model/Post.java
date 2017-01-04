@@ -10,15 +10,16 @@ public class Post {
 	private Integer active;
 	private Integer authorId;
 	private Integer lastModifiedUserId;
-	private Date modifiedDate;
+	private Date modified;
 	private String briefDescription;
+	private String postImagePath;
 	
 	public Post() {
 		super();
 	}
 
 	public Post(Integer postId, String title, String content, Integer active, Integer authorId,
-			Integer lastModifiedUserId, Date modifiedDate, String briefDescription) {
+			Integer lastModifiedUserId, Date modified, String briefDescription, String postImagePath) {
 		super();
 		this.postId = postId;
 		this.title = title;
@@ -26,8 +27,9 @@ public class Post {
 		this.active = active;
 		this.authorId = authorId;
 		this.lastModifiedUserId = lastModifiedUserId;
-		this.modifiedDate = modifiedDate;
+		this.modified = modified;
 		this.briefDescription = briefDescription;
+		this.postImagePath = postImagePath;
 	}
 
 	public Integer getPostId() {
@@ -78,12 +80,12 @@ public class Post {
 		this.lastModifiedUserId = lastModifiedUserId;
 	}
 
-	public Date getModifiedDate() {
-		return modifiedDate;
+	public Date getModified() {
+		return modified;
 	}
 
-	public void setModifiedDate(Date modifiedDate) {
-		this.modifiedDate = modifiedDate;
+	public void setModified(Date modifiedDate) {
+		this.modified = modifiedDate;
 	}
 
 	public String getBriefDescription() {
@@ -94,4 +96,11 @@ public class Post {
 		this.briefDescription = briefDescription;
 	}
 	
+	public String getPostImagePath() {
+		return postImagePath;
+	}
+
+	public void setPostImagePath(String postImagePath) {
+		this.postImagePath = postImagePath;
+	}
 }
