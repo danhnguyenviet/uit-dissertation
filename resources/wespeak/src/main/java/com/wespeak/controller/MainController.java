@@ -245,6 +245,19 @@ public class MainController {
 		Post list = postDAO.findPost(id);
 		model.addAttribute("postModel", list);
 		
+		List<Post> listModel = postDAO.listPost();
+		if (listModel != null) {
+			List<Post> listImportant = new ArrayList<Post>();
+			if (listModel.size() <= 4)
+				for (int i = 0; i < listModel.size(); i++)
+					listImportant.add(listModel.get(i));
+			else
+				for (int i = 0; i < 4; i++)
+					listImportant.add(listModel.get(i));
+			
+			model.addAttribute("postListImportant", listImportant);
+		}
+		
 		return "postDetailPage";
 	}
 	// ===== End of posts =====
