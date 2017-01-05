@@ -37,7 +37,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		// Các trang không yêu cầu login
 		http.authorizeRequests().antMatchers(
 				"/", 
-				"/welcome", 
 				"/login", 
 				"/logout", 
 				"/homeNotLogin",
