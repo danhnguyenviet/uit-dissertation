@@ -56,10 +56,7 @@ body {
 											<h3 id="info_listening_1">Listening...</h3>
 											<h3 id="info_no_speech_1">No speech was detected. You
 												may need to adjust your microphone settings.</h3>
-											<h3 id="info_incorrect_answer_1">Both "nervous" and
-												"hurts" have the long 'urr' sound. Round your lips, tense
-												your tongue and make the vowel long as you say "nurr-vuhs"
-												and "hurr-t".</h3>
+											<h3 id="info_incorrect_answer_1">If it's a 2-syllable adjective, you stress on the first syllable "NERvous".</h3>
 											<h3 id="info_correct_answer_1">Hey you already right,
 												you can move on now!</h3>
 											<h3 id="info_upgrade_1">
@@ -84,21 +81,13 @@ body {
 									</div>
 								</div>
 								<br>
+								
 								<div class="row">
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
-										<img src="img/manIcon.png" alt="man" style="width: 4%"><span
-											id="text1Level1" style="font-size: 125%"> How are you
-											feeling today?</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-8">
-										<img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
-											id="text2Level1" style="font-size: 125%"> I am so <u>nervous</u>
-											it <u>hurts</u>.
-										</span> <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										<span
+											id="text1Level2" style="font-size: 250%">nervous <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈnɜːvəs/</i></h3>
 									</div>
 								</div>
 								<br> <br>
@@ -166,7 +155,7 @@ body {
 			                           <h3 id="info_no_speech_2">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_2">Say "first" a long 'ur' sound - curl your tongue up and back.
+			                           <h3 id="info_incorrect_answer_2">Raise your voice at 2nd syllable "tuur".
 			                           </h3>
 			                           <h3 id="info_correct_answer_2">Hey you already right,
 			                              you can move on now!
@@ -196,21 +185,15 @@ body {
 			                     </div>
 			                  </div>
 			                  <br>
+			                  
 			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/manIcon.png" alt="man" style="width: 4%"><span
-			                           id="text3Level1" style="font-size: 125%"> Wow. What are you so nervous about?</span>
-			                     </div>
-			                  </div>
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
-			                           id="text4Level1" style="font-size: 125%"> I am going on a <u>first</u> date tonight.
-			                        </span> <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-			                     </div>
-			                  </div>
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<span
+											id="text2Level2" style="font-size: 250%">eternal <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/i:'tɜːnl/</i></h3>
+									</div>
+								</div>
 			                  <br> <br>
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
@@ -273,7 +256,7 @@ body {
 			                           <h3 id="info_no_speech_3">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_3">Say "first" a long 'ur' sound - curl your tongue up and back.
+			                           <h3 id="info_incorrect_answer_3">It's a 2 syllable adjective, you stress at the first syllable. There you go - you are PERfect.
 			                           </h3>
 			                           <h3 id="info_correct_answer_3">Hey you already right,
 			                              you can move on now!
@@ -303,21 +286,15 @@ body {
 			                     </div>
 			                  </div>
 			                  <br>
+			                  
 			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/manIcon.png" alt="man" style="width: 4%"><span
-			                           id="text5Level1" style="font-size: 125%"> Where did you two meet?</span>
-			                     </div>
-			                  </div>
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
-			                           id="text6Level1" style="font-size: 125%"> At a party. For me, it was love at <u>first</u> sight.
-			                        </span> <a href="javascript:void(0)" onclick="au6.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-			                     </div>
-			                  </div>
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<span
+											id="text3Level2" style="font-size: 250%">perfect <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈpɜːfɪkt/</i></h3>
+									</div>
+								</div>
 			                  <br> <br>
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
@@ -380,7 +357,7 @@ body {
 			                           <h3 id="info_no_speech_4">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_4">Both "conCERNED" and "Alone" start with the soft relaxed "uhn" sound. Your lips don't move much.
+			                           <h3 id="info_incorrect_answer_4">For most adjective, you stress on first syllable, 'PERmanent'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_4">Hey you already right,
 			                              you can move on now!
@@ -410,21 +387,15 @@ body {
 			                     </div>
 			                  </div>
 			                  <br>
+			                  
 			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/manIcon.png" alt="man" style="width: 4%"><span
-			                           id="text7Level1" style="font-size: 125%"> Amazing. Pick a quiet and romantic restaurant so you two can really talk.</span>
-			                     </div>
-			                  </div>
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
-			                           id="text8Level1" style="font-size: 125%"> But I'm <u>concerned</u> about knowing what to say when we are <u>alone</u>.
-			                        </span> <a href="javascript:void(0)" onclick="au8.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-			                     </div>
-			                  </div>
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<span
+											id="text4Level2" style="font-size: 250%">permanent <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈpɜːmənənt/</i></h3>
+									</div>
+								</div>
 			                  <br> <br>
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
@@ -487,7 +458,7 @@ body {
 			                           <h3 id="info_no_speech_5">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_5">Say "purrrrr" longer. Round your lips and curl your tongue up to make the vowel 'urr' long.
+			                           <h3 id="info_incorrect_answer_5">This is exception in English, it's a 2-syllable noun but it's stressed on the 2nd syllable, not the first one, 'conCERN'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_5">Hey you already right,
 			                              you can move on now!
@@ -517,21 +488,15 @@ body {
 			                     </div>
 			                  </div>
 			                  <br>
+			                  
 			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/manIcon.png" alt="man" style="width: 4%"><span
-			                           id="text9Level1" style="font-size: 125%"> I've listened to you, I am sure you will have plenty to say.</span>
-			                     </div>
-			                  </div>
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
-			                           id="text10Level1" style="font-size: 125%"> I hope so, I want us to be <u>perfect</u> for each other.
-			                        </span> <a href="javascript:void(0)" onclick="au10.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-			                     </div>
-			                  </div>
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<span
+											id="text5Level2" style="font-size: 250%">concern <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/kən'sə:n/</i></h3>
+									</div>
+								</div>
 			                  <br> <br>
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
@@ -548,7 +513,7 @@ body {
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <button onclick="showScreen('screen_6');"> <img
+			                        <button id="btnSeeYourResults" onclick="sendResults();"> <img
 			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
 			                        </button>
 			                     </div>
@@ -568,96 +533,16 @@ body {
 			   </div>
 			</div>
 			<!-- end panel 5 -->
-			<!-- panel 6 -->
-			<div id="screen_6">
-			   <div class="row">
-			      <div class="col-md-12">
-			         <div class="panel panel-default">
-			            <div class="panel-heading">
-			               <h3 class="panel-title">
-			                  Love <span class="pull-right" id="point_6">0</span>
-			               </h3>
-			            </div>
-			            <div class="panel-body" style="position: relative;">
-			               <center>
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/brief-logo.png" alt="man" style="width: 4%">
-			                        <br>
-			                        
-			                  <div class="row">
-			                     <div class="col-md-2"></div>
-			                     <div class="col-md-8">
-			                        <img src="img/manIcon.png" alt="man" style="width: 4%"><span
-			                           id="text11Level1" style="font-size: 125%"> Dating is a journey, so just relax and be yourself.</span>
-			                     </div>
-			                  </div>
-			                  <br> <br>
-			                  <div class="row">
-			                     <div class="col-md-3"></div>
-			                     <div class="col-md-2">
-			                     </div>
-			                     <div class="col-md-2">
-			                        <button class="btn btn-primary" id="btnSeeYourResults" data-toggle="modal" data-target="" onclick="sendResults();">See your results</button>
-			                     </div>
-			                     <div class="col-md-2">
-			                     </div>
-			                     <div class="col-md-3"></div>
-			                  </div>
-			                  <br>
-			                  <div class="row">
-			                     <div class="col-md-12" id="results">
-			                        <span id="final_span_6" class="final"></span> <span
-			                           id="interim_span_6" class="interim"></span>
-			                     </div>
-			                  </div>
-			               </center>
-			            </div>
-			         </div>
-			      </div>
-			   </div>
-			</div>
-			<!-- end panel 6 -->
-			<!-- Results modal -->
-			<div class="modal fade" id="resultsModal" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Your results</h4>
-					</div>
-					<div class="modal-body">
-					<center>
-						<img alt="logo" src="img/brief-logo.png">
-						<h3>Level points: <b id="levelPoints">60</b>/ 70</h3>
-						<h3>Total points: <b id="totalPoints">60</b>/ 730</h3>
-						</center>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="location.reload();">Play again</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location = '${pageContext.request.contextPath}/love';">Return level 1</button>
-					</div>
-				</div>
-
-			</div>
-		</div>
+			
+			
 		</div>
 		
 	</div>
-	<audio id="l1Audio1" src="voices/love.level1/level1.1.mp3"></audio>
-	<audio id="l1Audio2" src="voices/love.level1/level1.2.mp3"></audio>
-	<audio id="l1Audio3" src="voices/love.level1/level1.3.mp3"></audio>
-	<audio id="l1Audio4" src="voices/love.level1/level1.4.mp3"></audio>
-	<audio id="l1Audio5" src="voices/love.level1/level1.5.mp3"></audio>
-	<audio id="l1Audio6" src="voices/love.level1/level1.6.mp3"></audio>
-	<audio id="l1Audio7" src="voices/love.level1/level1.7.mp3"></audio>
-	<audio id="l1Audio8" src="voices/love.level1/level1.8.mp3"></audio>
-	<audio id="l1Audio9" src="voices/love.level1/level1.9.mp3"></audio>
-	<audio id="l1Audio10" src="voices/love.level1/level1.10.mp3"></audio>
-	<audio id="l1Audio11" src="voices/love.level1/level1.11.mp3"></audio>
+	<audio id="l1Audio1" src="voices/love.level2/nervous.mp3"></audio>
+	<audio id="l1Audio2" src="voices/love.level2/eternal.mp3"></audio>
+	<audio id="l1Audio3" src="voices/love.level2/perfect.mp3"></audio>
+	<audio id="l1Audio4" src="voices/love.level2/permanent.mp3"></audio>
+	<audio id="l1Audio5" src="voices/love.level2/concern.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
 
 	<script type="text/javascript">
@@ -675,12 +560,6 @@ body {
 		var au3 = document.getElementById('l1Audio3');
 		var au4 = document.getElementById('l1Audio4');
 		var au5 = document.getElementById('l1Audio5');
-		var au6 = document.getElementById('l1Audio6');
-		var au7 = document.getElementById('l1Audio7');
-		var au8 = document.getElementById('l1Audio8');
-		var au9 = document.getElementById('l1Audio9');
-		var au10 = document.getElementById('l1Audio10');
-		var au11 = document.getElementById('l1Audio11');
 
 		showScreen('screen_1');
 		showInfo_1('info_start_1');
@@ -869,23 +748,18 @@ body {
 				} else {
 					switch (screenLevel) {
 					case 1: 
-						if (final_transcript.includes('nervous') && final_transcript.includes('hurts')) {
-							interimPoint = 20;
+						if (final_transcript.includes('nervous')) {
+							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_1').innerHTML = point;
 							showInfo_1('info_correct_answer_1');
 							correctAnswerAu.play();
-						} else if (final_transcript.includes('nervous') || final_transcript.includes('hurts')) {
-							interimPoint = 10;
-							point += interimPoint;
-							document.getElementById('point_1').innerHTML = point;
-							showInfo_1('info_incorrect_answer_1');
-						} else if (!final_transcript.includes('nervous') && !final_transcript.includes('hurts')) {
+						} else {
 							showInfo_1('info_incorrect_answer_1');
 						}
 						break;
 					case 2:
-						if (final_transcript.includes('first')) {
+						if (final_transcript.includes('eternal')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_2').innerHTML = point;
@@ -896,7 +770,7 @@ body {
 						}
 						break;
 					case 3:
-						if (final_transcript.includes('first')) {
+						if (final_transcript.includes('perfect')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_3').innerHTML = point;
@@ -907,23 +781,18 @@ body {
 						}
 						break;
 					case 4: 
-						if (final_transcript.includes('concerned') && final_transcript.includes('alone')) {
-							interimPoint = 20;
+						if (final_transcript.includes('permanent')) {
+							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_4').innerHTML = point;
 							showInfo_4('info_correct_answer_4');
 							correctAnswerAu.play();
-						} else if (final_transcript.includes('concerned') || final_transcript.includes('alone')) {
-							interimPoint = 10;
-							point += interimPoint;
-							document.getElementById('point_4').innerHTML = point;
-							showInfo_4('info_incorrect_answer_4');
-						} else if (!final_transcript.includes('concerned') && !final_transcript.includes('alone')) {
+						} else {
 							showInfo_4('info_incorrect_answer_4');
 						}
 						break;
 					case 5:
-						if (final_transcript.includes('perfect')) {
+						if (final_transcript.includes('concern')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_5').innerHTML = point;
@@ -970,7 +839,7 @@ body {
 						interim_transcript += event.results[i][0].transcript;
 					}
 				}
-				final_transcript = capitalize(final_transcript);
+				//final_transcript = capitalize(final_transcript);
 				switch (screenLevel) {
 				case 1: 
 					final_span_1.innerHTML = linebreak(final_transcript);
@@ -1131,78 +1000,40 @@ body {
 			switch (screenLevel) {
 			case 1:
 				setTimeout(function() {
-					document.getElementById('text1Level1').style.color = "red";
 					au1.play();
 					
 				}, 1 * 1000);
-				setTimeout(function() {
-					document.getElementById('text1Level1').style.color = "black";
-					document.getElementById('text2Level1').style.color = "red";
-					au2.play();
-				}, 4 * 1000);
 				break;
 			case 2: 
-				au1.muted = true; au2.muted = true; 
+				au1.muted = true;  
 				document.getElementById('point_2').innerHTML = point;
 				setTimeout(function() {
-					document.getElementById('text3Level1').style.color = "red";
+					au2.play();
+					
+				}, 1 * 1000);
+				break;
+			case 3: 
+				au2.muted = true; 
+				document.getElementById('point_3').innerHTML = point;
+				setTimeout(function() {
 					au3.play();
 					
 				}, 1 * 1000);
-				setTimeout(function() {
-					document.getElementById('text3Level1').style.color = "black";
-					document.getElementById('text4Level1').style.color = "red";
-					au4.play();
-				}, 6 * 1000);
-				break;
-			case 3: 
-				au3.muted = true; au4.muted = true; 
-				document.getElementById('point_3').innerHTML = point;
-				setTimeout(function() {
-					document.getElementById('text5Level1').style.color = "red";
-					au5.play();
-					
-				}, 1 * 1000);
-				setTimeout(function() {
-					document.getElementById('text5Level1').style.color = "black";
-					document.getElementById('text6Level1').style.color = "red";
-					au6.play();
-				}, 4 * 1000);
 				break;
 			case 4: 
-				au5.muted = true; au6.muted = true; 
+				au3.muted = true; 
 				document.getElementById('point_4').innerHTML = point;
 				setTimeout(function() {
-					document.getElementById('text7Level1').style.color = "red";
-					au7.play();
+					au4.play();
 					
 				}, 1 * 1000);
-				setTimeout(function() {
-					document.getElementById('text7Level1').style.color = "black";
-					document.getElementById('text8Level1').style.color = "red";
-					au8.play();
-				}, 10 * 1000);
 				break;
 			case 5: 
-				au7.muted = true; au8.muted = true; 
+				au4.muted = true; 
 				document.getElementById('point_5').innerHTML = point;
 				setTimeout(function() {
-					document.getElementById('text9Level1').style.color = "red";
-					au9.play();
+					au5.play();
 					
-				}, 1 * 1000);
-				setTimeout(function() {
-					document.getElementById('text9Level1').style.color = "black";
-					document.getElementById('text10Level1').style.color = "red";
-					au10.play();
-				}, 8 * 1000);
-				break;
-			case 6: 
-				au9.muted = true; au10.muted = true; 
-				document.getElementById('point_6').innerHTML = point;
-				setTimeout(function() {
-					document.getElementById('text11Level1').style.color = "red";
-					au11.play();
 				}, 1 * 1000);
 				break;
 			}
@@ -1295,7 +1126,7 @@ body {
 		
 		function sendResults() {
 			var userId = '${userInfo.getUserId()}';
-			var levelId = 1;
+			var levelId = 2;
 			/*
 			var data = {};
 			data["userId"] = userId;

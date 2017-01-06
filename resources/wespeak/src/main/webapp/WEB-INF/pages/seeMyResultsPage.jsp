@@ -35,8 +35,8 @@ body {
 						<div class="row">
 							<div class="col-md-12">
 								<center>
-									<button class="btn btn-primary" id="btnPlayAgain" onclick="redirectPlayLevel1();">Play again</button>&nbsp;&nbsp;
-									<button class="btn btn-primary" id="btnReturnLevel" onclick="redirectListenLevel1();">Return the level</button>
+									<button class="btn btn-primary" id="btnPlayAgain" onclick="redirectPlayAgain();">Play again</button>&nbsp;&nbsp;
+									<button class="btn btn-primary" id="btnReturnLevel" onclick="redirectLevels();">Return the level</button>
 								</center>
 							</div>
 						</div>
@@ -45,39 +45,35 @@ body {
 			</div>
 		</div>
 
-		<!-- Level 1 Modal -->
-		<div class="modal fade" id="level1Modal" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">First date</h4>
-					</div>
-					<div class="modal-body">
-						<p><strong>Keywords:</strong> nervous, hurts, first date, concerned, alone, perfect.</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="redirectPlayLevel1();">Play</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="redirectListenLevel1();">Listen</button>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		
-		
 	</div>
 
 </body>
 <script type="text/javascript">
-	function redirectListenLevel1() {
+	function redirectLevels() {
 		window.location = "${pageContext.request.contextPath}/love";
 	}
 	
-	function redirectPlayLevel1() {
-		window.location = "${pageContext.request.contextPath}/playLevel1OfLove";
+	function redirectPlayAgain() {
+		switch (${levelId}) {
+		case 1:
+			window.location = "${pageContext.request.contextPath}/playLevel1OfLove";
+			break;
+		case 2:
+			window.location = "${pageContext.request.contextPath}/startLevel2OfLove";
+			break;
+		case 3:
+			window.location = "${pageContext.request.contextPath}/startLevel3OfLove";
+			break;
+		case 4:
+			window.location = "${pageContext.request.contextPath}/startLevel4OfLove";
+			break;
+		case 5:
+			window.location = "${pageContext.request.contextPath}/startLevel5OfLove";
+			break;
+		case 6:
+			window.location = "${pageContext.request.contextPath}/startLevel6OfLove";
+			break;
+		}
 	}
 </script>
 </html>

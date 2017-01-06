@@ -52,6 +52,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				"/love",
 				"/playLevel1OfLove",
 				"/listenLevel1OfLove",
+				"/startLevel2OfLove",
+				"/startLevel3OfLove",
+				"/startLevel4OfLove",
+				"/startLevel5OfLove",
+				"/startLevel6OfLove",
 				"/seeMyResults",
 				"/basicInfo").access("hasAnyRole('ROLE_TEACHER', 'ROLE_STUDENT', 'ROLE_SUBADMIN', 'ROLE_ADMIN')");
 

@@ -108,6 +108,56 @@ public class MainController {
        return "playLevel1OfLovePage";
    }
    
+   @RequestMapping(value = "/startLevel2OfLove", method = RequestMethod.GET)
+   public String startLevel2OfLovePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+       model.addAttribute("title", "WeSpeak | Level 2: Word stress");
+       
+       return "startLevel2OfLovePage";
+   }
+   
+   @RequestMapping(value = "/startLevel3OfLove", method = RequestMethod.GET)
+   public String startLevel3OfLovePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+       model.addAttribute("title", "WeSpeak | Level 3: Early gets the girl");
+       
+       return "startLevel3OfLovePage";
+   } 
+   
+   @RequestMapping(value = "/startLevel4OfLove", method = RequestMethod.GET)
+   public String startLevel4OfLovePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+       model.addAttribute("title", "WeSpeak | Level 4: Sentence stress");
+       
+       return "startLevel4OfLovePage";
+   }
+   
+   @RequestMapping(value = "/startLevel5OfLove", method = RequestMethod.GET)
+   public String startLevel5OfLovePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+       model.addAttribute("title", "WeSpeak | Level 5: Journey for two");
+       
+       return "startLevel5OfLovePage";
+   }
+   
+   @RequestMapping(value = "/startLevel6OfLove", method = RequestMethod.GET)
+   public String startLevel6OfLovePage(Model model) {
+	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	   model.addAttribute("username", auth.getName());
+	   model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+       model.addAttribute("title", "WeSpeak | Level 6: You're ont alone");
+       
+       return "startLevel6OfLovePage";
+   }
+   
    @RequestMapping(value="/updateLevelPoints", method = RequestMethod.POST)
    public RedirectView updateProductInfo(ModelMap model,
 			@RequestParam(value = "userId_c") Integer userId_c,
@@ -123,13 +173,15 @@ public class MainController {
 	   }
 	   MyResultsModel mrm = new MyResultsModel(point_c, userInfoDAO.getTotalPoints(userId_c));
 	   rAttr.addFlashAttribute("mrm", mrm);
+	   rAttr.addFlashAttribute("levelId", levelId_c);
 	   System.out.println("Danh Nguyen " + userId_c + " " + levelId_c + " " + point_c + " " + userInfoDAO.getTotalPoints(userId_c));
 	   
 	   return new RedirectView("redirect:seeMyResults");
    }
 
    @RequestMapping(value = "/seeMyResults", method = RequestMethod.GET)
-   public String seeMyResults(Model model, @ModelAttribute(value="mrm") final MyResultsModel mrm) {
+   public String seeMyResults(Model model, @ModelAttribute(value="mrm") final MyResultsModel mrm,
+		   @ModelAttribute(value="levelId") final Integer levelId) {
 	   
 	   Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	   model.addAttribute("username", auth.getName());
@@ -137,6 +189,7 @@ public class MainController {
 		   MyResultsModel myResultsModel = new MyResultsModel(mrm.getLevelPoints(), mrm.getTotalPoints());
 		   model.addAttribute("mrm", myResultsModel);
 	   }
+	   model.addAttribute("levelId", levelId);
 	   model.addAttribute("title", "WeSpeak | Kết quả của bạn");
 	   System.out.println("Danh Nguyen @" + mrm.getLevelPoints() + " " + mrm.getTotalPoints());
 	   
