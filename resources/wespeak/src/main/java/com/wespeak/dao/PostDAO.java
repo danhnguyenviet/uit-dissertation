@@ -48,4 +48,29 @@ public class PostDAO extends JdbcDaoSupport {
 			return null;
 		}
 	}
+
+	public List<Post> listPostActive(int active) {
+		String sql = "Select *"//
+				+ " from posts u " + "where u.Active =" + active;
+
+		Object[] params = new Object[] {};
+		PostMapper mapper = new PostMapper();
+		try {
+			List<Post> list = this.getJdbcTemplate().query(sql, params, mapper);
+			return list;
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+
+	public void updatePostActive(Integer postId, int active) {
+		String sql = "UPDATE posts SET Active = " + active//
+				+ " where postId=" + postId;
+
+		try {
+			this.getJdbcTemplate().update(sql);
+		} catch (EmptyResultDataAccessException e) {
+			return;
+		}
+	}
 }

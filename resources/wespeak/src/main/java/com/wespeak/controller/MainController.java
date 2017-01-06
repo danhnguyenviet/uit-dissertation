@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.wespeak.dao.UserInfoDAO;
-import com.wespeak.dao.impl.UserInfoDAOImpl;
 import com.wespeak.model.PronunciationResultsModel;
+import com.wespeak.model.Users;
 import com.wespeak.dao.ClassListDAO;
 import com.wespeak.dao.CoursewareDAO;
 import com.wespeak.dao.PostDAO;
@@ -220,7 +220,7 @@ public class MainController {
 		model.addAttribute("username", auth.getName());
 		model.addAttribute("title", "WeSpeak | Bài viết kinh nghiệm");
 
-		List<Post> list = postDAO.listPost();
+		List<Post> list = postDAO.listPostActive(1);
 		model.addAttribute("postModel", list);
 		if (list != null) {
 			List<Post> listImportant = new ArrayList<Post>();
@@ -261,4 +261,63 @@ public class MainController {
 		return "postDetailPage";
 	}
 	// ===== End of posts =====
+	
+	
+	// ===== Begin of admin checkPostPage=====
+		@RequestMapping(value = "/checkPost", method = RequestMethod.GET)
+		public String checkPostPage(Model model) {
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			model.addAttribute("username", auth.getName());
+			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+			//find the post are active=0
+			List<Post> list = postDAO.listPostActive(0);
+			model.addAttribute("postModel", list);
+			return "checkPostPage";
+		}
+		
+		@RequestMapping(value = "/checkPostOK", method = RequestMethod.GET)
+		public String checkPostOK(Model model, @RequestParam(value = "id") Integer id) {
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			model.addAttribute("username", auth.getName());
+			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+			// update active = 1
+			postDAO.updatePostActive(id, 1);
+			
+			//find the post are active=0
+			List<Post> list = postDAO.listPostActive(0);
+			model.addAttribute("postModel", list);
+			return "checkPostPage";
+		}
+		
+		@RequestMapping(value = "/checkPostCancel", method = RequestMethod.GET)
+		public String checkPostCancel(Model model, @RequestParam(value = "id") Integer id) {
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			model.addAttribute("username", auth.getName());
+			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+			// update active = -1
+			postDAO.updatePostActive(id, -1);
+						
+			//find the post are active=0
+			List<Post> list = postDAO.listPostActive(0);
+			model.addAttribute("postModel", list);
+			return "checkPostPage";
+		}
+		// ===== End of admin checkPostPage=====
+		
+		// ===== Start of admin checkPostPage=====
+		@RequestMapping(value = "/managerUser", method = RequestMethod.GET)
+		public String managerUser(Model model) {
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			model.addAttribute("username", auth.getName());
+			model.addAttribute("title", "WeSpeak | Quản lý tài khoản");
+
+			List<Users> list = userDAO.listUser();
+			model.addAttribute("userModel", list);
+
+			return "managerUserPage";
+		}
+		// ===== End of admin checkPostPage=====
 }

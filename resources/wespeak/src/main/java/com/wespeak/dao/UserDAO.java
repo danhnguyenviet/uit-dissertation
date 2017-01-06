@@ -42,12 +42,26 @@ public class UserDAO extends JdbcDaoSupport {
 		Object[] params = new Object[] {};
 		UserMapper mapper = new UserMapper();
 		try {
-		List<Users> list = this.getJdbcTemplate().query(sql, params, mapper);
-		if (list != null)
-			return list.get(0).getUserGroupId();
+			List<Users> list = this.getJdbcTemplate().query(sql, params, mapper);
+			if (list != null)
+				return list.get(0).getUserGroupId();
 		} catch (EmptyResultDataAccessException e) {
 			return -1;
 		}
 		return -1;
+	}
+
+	public List<Users> listUser() {
+		String sql = "Select *"//
+				+ " from  Users";
+
+		Object[] params = new Object[] {};
+		UserMapper mapper = new UserMapper();
+		try {
+			List<Users> list = this.getJdbcTemplate().query(sql, params, mapper);
+			return list;
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 }
