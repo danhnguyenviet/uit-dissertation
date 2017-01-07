@@ -1127,11 +1127,6 @@ body {
 		function sendResults() {
 			var userId = '${userInfo.getUserId()}';
 			var levelId = 2;
-			/*
-			var data = {};
-			data["userId"] = userId;
-			data["levelId"] = userId;
-			data["point"] = point; */
 			
 			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
 				userId_c : userId,
@@ -1149,21 +1144,6 @@ body {
 						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					});
 			
-			/*
-			$.ajax({
-	             type: "POST",
-	             contentType: "application/json",
-	             url: "${pageContext.request.contextPath}/updateLevelPoints",
-	             data: JSON.stringify(data),
-	             dataType: 'json',
-	             timeout: 600000,
-	             success: function (data) {
-	            	 alert("true " + userId + " " + levelId + " " + point);
-	             },
-	             error: function (e) {
-	            	 alert("false " + userId + " " + levelId + " " + point);
-	             }
-			}); */
 		}
 		
 	</script>

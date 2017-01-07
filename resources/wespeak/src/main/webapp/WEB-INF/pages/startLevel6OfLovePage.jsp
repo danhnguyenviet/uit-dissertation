@@ -56,7 +56,7 @@ body {
 											<h3 id="info_listening_1">Listening...</h3>
 											<h3 id="info_no_speech_1">No speech was detected. You
 												may need to adjust your microphone settings.</h3>
-											<h3 id="info_incorrect_answer_1">Let me hear the /ɜr/ more clearly, by putting your tongue up and back, "earrrrly", /ˈɜːrli/.</h3>
+											<h3 id="info_incorrect_answer_1">Keep 'en' in 'taken' very relaxed and soft. Your 2 lips are singly apart. Keep your tongue flat, /ˈteɪ kən/.</h3>
 											<h3 id="info_correct_answer_1">Hey you already right,
 												you can move on now!</h3>
 											<h3 id="info_upgrade_1">
@@ -86,8 +86,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text1Level2" style="font-size: 250%"><strong>ear</strong>ly <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈɜːrli/</i></h3>
+											id="text1Level2" style="font-size: 250%">tak<strong>e</strong>n <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈteɪ kən/</i></h3>
 									</div>
 								</div>
 								<br> <br>
@@ -155,7 +155,7 @@ body {
 			                           <h3 id="info_no_speech_2">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_2">For "ɜr", put your tongue up and back to touch the insides of your top teeth, /fɜrst/.
+			                           <h3 id="info_incorrect_answer_2">The first syllable 'a' should be very soft and fast, like /əˈloʊn/.
 			                           </h3>
 			                           <h3 id="info_correct_answer_2">Hey you already right,
 			                              you can move on now!
@@ -190,8 +190,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text2Level2" style="font-size: 250%">f<strong>ir</strong>st <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈfɜːst/</i></h3>
+											id="text2Level2" style="font-size: 250%"><strong>a</strong>lone <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/əˈloʊn/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -256,7 +256,7 @@ body {
 			                           <h3 id="info_no_speech_3">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_3">Put your tongue up and back to touch the insides of your top teeth, /hərd/.
+			                           <h3 id="info_incorrect_answer_3">The last syllable 'cant' should sound very relaxed. Your tongue is flat and straight, slightly downward, .
 			                           </h3>
 			                           <h3 id="info_correct_answer_3">Hey you already right,
 			                              you can move on now!
@@ -291,8 +291,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text3Level2" style="font-size: 250%">h<strong>ear</strong>d <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hə:d/</i></h3>
+											id="text3Level2" style="font-size: 250%">signific<strong>a</strong>nt <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/sɪgˈnɪf ɪ kənt/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -357,7 +357,7 @@ body {
 			                           <h3 id="info_no_speech_4">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_4">Touch your throat. Make sure it vibrates when you put your tongue up and back for /'ɡɜrl/.
+			                           <h3 id="info_incorrect_answer_4">In the first syllable, it sounds more like 'cuhn', not 'con'. Say it very lightly and fast. Don't move your lip much, /kənˈsɜrn/.
 			                           </h3>
 			                           <h3 id="info_correct_answer_4">Hey you already right,
 			                              you can move on now!
@@ -392,8 +392,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text4Level2" style="font-size: 250%">g<strong>ir</strong>l <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ɡɜːl/</i></h3>
+											id="text4Level2" style="font-size: 250%">c<strong>o</strong>ncern <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/kənˈsɜrn/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -458,7 +458,7 @@ body {
 			                           <h3 id="info_no_speech_5">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_5">Put your tongue up and back to say 'errrrr', then 'herrrrrt'. This won't hurt you, I promise!
+			                           <h3 id="info_incorrect_answer_5">2nd and 3rd syllables are not too important. Say it softly. It's not 'pas-shn-neit', it's 'pas- shuh- nuht'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_5">Hey you already right,
 			                              you can move on now!
@@ -493,8 +493,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text5Level2" style="font-size: 250%">h<strong>ur</strong>t <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hɜːt/</i></h3>
+											id="text5Level2" style="font-size: 250%">pass<strong>io</strong>n<strong>a</strong>te <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈpæʃ ə nɪt/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -538,11 +538,11 @@ body {
 		</div>
 		
 	</div>
-	<audio id="l1Audio1" src="voices/love.level3/early.mp3"></audio>
-	<audio id="l1Audio2" src="voices/love.level3/first.mp3"></audio>
-	<audio id="l1Audio3" src="voices/love.level3/heard.mp3"></audio>
-	<audio id="l1Audio4" src="voices/love.level3/girl.mp3"></audio>
-	<audio id="l1Audio5" src="voices/love.level3/hurt.mp3"></audio>
+	<audio id="l1Audio1" src="voices/love.level6/taken.mp3"></audio>
+	<audio id="l1Audio2" src="voices/love.level6/alone.mp3"></audio>
+	<audio id="l1Audio3" src="voices/love.level6/significant.mp3"></audio>
+	<audio id="l1Audio4" src="voices/love.level6/concern.mp3"></audio>
+	<audio id="l1Audio5" src="voices/love.level6/passionate.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
 
 	<script type="text/javascript">
@@ -748,7 +748,7 @@ body {
 				} else {
 					switch (screenLevel) {
 					case 1: 
-						if (final_transcript.includes('early')) {
+						if (final_transcript.includes('taken')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_1').innerHTML = point;
@@ -759,7 +759,7 @@ body {
 						}
 						break;
 					case 2:
-						if (final_transcript.includes('first')) {
+						if (final_transcript.includes('alone')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_2').innerHTML = point;
@@ -770,7 +770,7 @@ body {
 						}
 						break;
 					case 3:
-						if (final_transcript.includes('heard')) {
+						if (final_transcript.includes('significant')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_3').innerHTML = point;
@@ -781,7 +781,7 @@ body {
 						}
 						break;
 					case 4: 
-						if (final_transcript.includes('girl')) {
+						if (final_transcript.includes('concern')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_4').innerHTML = point;
@@ -792,7 +792,7 @@ body {
 						}
 						break;
 					case 5:
-						if (final_transcript.includes('hurt')) {
+						if (final_transcript.includes('passionate')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_5').innerHTML = point;
@@ -1126,13 +1126,8 @@ body {
 		
 		function sendResults() {
 			var userId = '${userInfo.getUserId()}';
-			var levelId = 3;
-			/*
-			var data = {};
-			data["userId"] = userId;
-			data["levelId"] = userId;
-			data["point"] = point; */
-			
+			var levelId = 6;
+		
 			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
 				userId_c : userId,
 				levelId_c : levelId,

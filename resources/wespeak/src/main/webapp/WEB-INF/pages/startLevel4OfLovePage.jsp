@@ -56,7 +56,7 @@ body {
 											<h3 id="info_listening_1">Listening...</h3>
 											<h3 id="info_no_speech_1">No speech was detected. You
 												may need to adjust your microphone settings.</h3>
-											<h3 id="info_incorrect_answer_1">Let me hear the /ɜr/ more clearly, by putting your tongue up and back, "earrrrly", /ˈɜːrli/.</h3>
+											<h3 id="info_incorrect_answer_1">The key words here are LOVE and FIRST. Say those 2 words louder and longer. By the way, what's your relation ship status?</h3>
 											<h3 id="info_correct_answer_1">Hey you already right,
 												you can move on now!</h3>
 											<h3 id="info_upgrade_1">
@@ -86,8 +86,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text1Level2" style="font-size: 250%"><strong>ear</strong>ly <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈɜːrli/</i></h3>
+											id="text1Level2" style="font-size: 250%">It was <strong><u>love</u></strong> at <strong><u>first</u></strong> sight <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span>
 									</div>
 								</div>
 								<br> <br>
@@ -155,7 +155,7 @@ body {
 			                           <h3 id="info_no_speech_2">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_2">For "ɜr", put your tongue up and back to touch the insides of your top teeth, /fɜrst/.
+			                           <h3 id="info_incorrect_answer_2">Raise your voice at "nervous" to emphasize your feelings. Lengthen the word "hurts" at the end - that's your key message.
 			                           </h3>
 			                           <h3 id="info_correct_answer_2">Hey you already right,
 			                              you can move on now!
@@ -190,8 +190,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text2Level2" style="font-size: 250%">f<strong>ir</strong>st <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈfɜːst/</i></h3>
+											id="text2Level2" style="font-size: 250%">I am so <strong><u>nervous</u></strong> it <strong><u>hurts</u></strong> <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> 
 									</div>
 								</div>
 			                  <br> <br>
@@ -256,7 +256,7 @@ body {
 			                           <h3 id="info_no_speech_3">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_3">Put your tongue up and back to touch the insides of your top teeth, /hərd/.
+			                           <h3 id="info_incorrect_answer_3">It's your FIRST DATE - you gotta tell the world by saying it louder and longer.
 			                           </h3>
 			                           <h3 id="info_correct_answer_3">Hey you already right,
 			                              you can move on now!
@@ -291,8 +291,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text3Level2" style="font-size: 250%">h<strong>ear</strong>d <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hə:d/</i></h3>
+											id="text3Level2" style="font-size: 250%">I am going on a <strong><u>first</u></strong> <strong><u>date</u></strong> toninght <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span>
 									</div>
 								</div>
 			                  <br> <br>
@@ -357,7 +357,7 @@ body {
 			                           <h3 id="info_no_speech_4">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_4">Touch your throat. Make sure it vibrates when you put your tongue up and back for /'ɡɜrl/.
+			                           <h3 id="info_incorrect_answer_4">I'd be nervous too... especially if it's my first date! Make sure you highlight those 2 important words "nervous" and "alone".
 			                           </h3>
 			                           <h3 id="info_correct_answer_4">Hey you already right,
 			                              you can move on now!
@@ -392,8 +392,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text4Level2" style="font-size: 250%">g<strong>ir</strong>l <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ɡɜːl/</i></h3>
+											id="text4Level2" style="font-size: 250%">I'm <strong><u>nervous</u></strong> when we are <strong><u>alone</u></strong> <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span>
 									</div>
 								</div>
 			                  <br> <br>
@@ -458,7 +458,7 @@ body {
 			                           <h3 id="info_no_speech_5">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_5">Put your tongue up and back to say 'errrrr', then 'herrrrrt'. This won't hurt you, I promise!
+			                           <h3 id="info_incorrect_answer_5">The one very important word here is "PERFECT", so say it louder and higher voice. Don't forget to lower your voice at the end.
 			                           </h3>
 			                           <h3 id="info_correct_answer_5">Hey you already right,
 			                              you can move on now!
@@ -493,8 +493,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text5Level2" style="font-size: 250%">h<strong>ur</strong>t <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hɜːt/</i></h3>
+											id="text5Level2" style="font-size: 250%">I want us to be <strong><u>perfect</u></strong> for each other <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span>
 									</div>
 								</div>
 			                  <br> <br>
@@ -538,11 +538,11 @@ body {
 		</div>
 		
 	</div>
-	<audio id="l1Audio1" src="voices/love.level3/early.mp3"></audio>
-	<audio id="l1Audio2" src="voices/love.level3/first.mp3"></audio>
-	<audio id="l1Audio3" src="voices/love.level3/heard.mp3"></audio>
-	<audio id="l1Audio4" src="voices/love.level3/girl.mp3"></audio>
-	<audio id="l1Audio5" src="voices/love.level3/hurt.mp3"></audio>
+	<audio id="l1Audio1" src="voices/love.level4/level4.love.1.mp3"></audio>
+	<audio id="l1Audio2" src="voices/love.level4/level4.love.2.mp3"></audio>
+	<audio id="l1Audio3" src="voices/love.level4/level4.love.3.mp3"></audio>
+	<audio id="l1Audio4" src="voices/love.level4/level4.love.4.mp3"></audio>
+	<audio id="l1Audio5" src="voices/love.level4/level4.love.5.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
 
 	<script type="text/javascript">
@@ -748,51 +748,71 @@ body {
 				} else {
 					switch (screenLevel) {
 					case 1: 
-						if (final_transcript.includes('early')) {
-							interimPoint = 10;
+						if (final_transcript.includes('love') && final_transcript.includes('first')) {
+							interimPoint = 20;
 							point += interimPoint;
 							document.getElementById('point_1').innerHTML = point;
 							showInfo_1('info_correct_answer_1');
 							correctAnswerAu.play();
-						} else {
+						} else if (final_transcript.includes('love') || final_transcript.includes('first')) {
+							interimPoint = 10;
+							point += interimPoint;
+							document.getElementById('point_1').innerHTML = point;
+							showInfo_1('info_incorrect_answer_1');
+						} else if (!final_transcript.includes('love') && !final_transcript.includes('first')) {
 							showInfo_1('info_incorrect_answer_1');
 						}
 						break;
 					case 2:
-						if (final_transcript.includes('first')) {
-							interimPoint = 10;
+						if (final_transcript.includes('nervous') && final_transcript.includes('hurts')) {
+							interimPoint = 20;
 							point += interimPoint;
 							document.getElementById('point_2').innerHTML = point;
 							showInfo_2('info_correct_answer_2');
 							correctAnswerAu.play();
-						} else {
+						} else if (final_transcript.includes('nervous') || final_transcript.includes('hurts')) {
+							interimPoint = 10;
+							point += interimPoint;
+							document.getElementById('point_2').innerHTML = point;
+							showInfo_2('info_incorrect_answer_2');
+						} else if (!final_transcript.includes('nervous') && !final_transcript.includes('hurts')) {
 							showInfo_2('info_incorrect_answer_2');
 						}
 						break;
 					case 3:
-						if (final_transcript.includes('heard')) {
-							interimPoint = 10;
+						if (final_transcript.includes('first') && final_transcript.includes('date')) {
+							interimPoint = 20;
 							point += interimPoint;
 							document.getElementById('point_3').innerHTML = point;
 							showInfo_3('info_correct_answer_3');
 							correctAnswerAu.play();
-						} else {
+						} else if (final_transcript.includes('first') || final_transcript.includes('date')) {
+							interimPoint = 10;
+							point += interimPoint;
+							document.getElementById('point_3').innerHTML = point;
+							showInfo_3('info_incorrect_answer_3');
+						} else if (!final_transcript.includes('first') && !final_transcript.includes('date')) {
 							showInfo_3('info_incorrect_answer_3');
 						}
 						break;
 					case 4: 
-						if (final_transcript.includes('girl')) {
-							interimPoint = 10;
+						if (final_transcript.includes('nervous') && final_transcript.includes('alone')) {
+							interimPoint = 20;
 							point += interimPoint;
 							document.getElementById('point_4').innerHTML = point;
 							showInfo_4('info_correct_answer_4');
 							correctAnswerAu.play();
-						} else {
+						} else if (final_transcript.includes('nervous') || final_transcript.includes('alone')) {
+							interimPoint = 10;
+							point += interimPoint;
+							document.getElementById('point_4').innerHTML = point;
+							showInfo_4('info_incorrect_answer_4');
+						} else if (!final_transcript.includes('nervous') && !final_transcript.includes('alone')) {
 							showInfo_4('info_incorrect_answer_4');
 						}
 						break;
 					case 5:
-						if (final_transcript.includes('hurt')) {
+						if (final_transcript.includes('perfect')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_5').innerHTML = point;
@@ -839,7 +859,7 @@ body {
 						interim_transcript += event.results[i][0].transcript;
 					}
 				}
-				//final_transcript = capitalize(final_transcript);
+				final_transcript = capitalize(final_transcript);
 				switch (screenLevel) {
 				case 1: 
 					final_span_1.innerHTML = linebreak(final_transcript);
@@ -1126,12 +1146,7 @@ body {
 		
 		function sendResults() {
 			var userId = '${userInfo.getUserId()}';
-			var levelId = 3;
-			/*
-			var data = {};
-			data["userId"] = userId;
-			data["levelId"] = userId;
-			data["point"] = point; */
+			var levelId = 4;
 			
 			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
 				userId_c : userId,

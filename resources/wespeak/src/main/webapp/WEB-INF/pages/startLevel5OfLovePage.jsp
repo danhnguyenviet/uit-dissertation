@@ -56,7 +56,7 @@ body {
 											<h3 id="info_listening_1">Listening...</h3>
 											<h3 id="info_no_speech_1">No speech was detected. You
 												may need to adjust your microphone settings.</h3>
-											<h3 id="info_incorrect_answer_1">Let me hear the /ɜr/ more clearly, by putting your tongue up and back, "earrrrly", /ˈɜːrli/.</h3>
+											<h3 id="info_incorrect_answer_1">Round your lip, put your tongue up and back, let me hear 'r' longer, 'Worrrrrd'.</h3>
 											<h3 id="info_correct_answer_1">Hey you already right,
 												you can move on now!</h3>
 											<h3 id="info_upgrade_1">
@@ -86,8 +86,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text1Level2" style="font-size: 250%"><strong>ear</strong>ly <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈɜːrli/</i></h3>
+											id="text1Level2" style="font-size: 250%">w<strong>or</strong>d <a href="javascript:void(0)" onclick="au1.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/'wɜːd/</i></h3>
 									</div>
 								</div>
 								<br> <br>
@@ -155,7 +155,7 @@ body {
 			                           <h3 id="info_no_speech_2">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_2">For "ɜr", put your tongue up and back to touch the insides of your top teeth, /fɜrst/.
+			                           <h3 id="info_incorrect_answer_2">Put your tongue up and back. Say 'jourrrrr' longer, 'jourrrrrney'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_2">Hey you already right,
 			                              you can move on now!
@@ -190,8 +190,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text2Level2" style="font-size: 250%">f<strong>ir</strong>st <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ˈfɜːst/</i></h3>
+											id="text2Level2" style="font-size: 250%">j<strong>our</strong>ney <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/'dʤə:ni/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -256,7 +256,7 @@ body {
 			                           <h3 id="info_no_speech_3">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_3">Put your tongue up and back to touch the insides of your top teeth, /hərd/.
+			                           <h3 id="info_incorrect_answer_3">Say 'purrrrr' longer. Touch your throat to check if it vibrates. 'Purrrr-fict'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_3">Hey you already right,
 			                              you can move on now!
@@ -291,8 +291,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text3Level2" style="font-size: 250%">h<strong>ear</strong>d <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hə:d/</i></h3>
+											id="text3Level2" style="font-size: 250%">p<strong>er</strong>fect <a href="javascript:void(0)" onclick="au3.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈpɜːfɪkt/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -357,7 +357,7 @@ body {
 			                           <h3 id="info_no_speech_4">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_4">Touch your throat. Make sure it vibrates when you put your tongue up and back for /'ɡɜrl/.
+			                           <h3 id="info_incorrect_answer_4">Let me hear the 'r'. Say 'terrrrr' very long. 'eterrrrrnal'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_4">Hey you already right,
 			                              you can move on now!
@@ -392,8 +392,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text4Level2" style="font-size: 250%">g<strong>ir</strong>l <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/ɡɜːl/</i></h3>
+											id="text4Level2" style="font-size: 250%">et<strong>er</strong>nal <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/i:'tə:nl/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -458,7 +458,7 @@ body {
 			                           <h3 id="info_no_speech_5">No speech was detected. You
 			                              may need to adjust your microphone settings.
 			                           </h3>
-			                           <h3 id="info_incorrect_answer_5">Put your tongue up and back to say 'errrrr', then 'herrrrrt'. This won't hurt you, I promise!
+			                           <h3 id="info_incorrect_answer_5">Don't be nervous! Remeber to put your tongue up and back, it will help - 'nerrr-vuhs'.
 			                           </h3>
 			                           <h3 id="info_correct_answer_5">Hey you already right,
 			                              you can move on now!
@@ -493,8 +493,8 @@ body {
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
 										<span
-											id="text5Level2" style="font-size: 250%">h<strong>ur</strong>t <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
-										</span> <h3><i>/'hɜːt/</i></h3>
+											id="text5Level2" style="font-size: 250%">n<strong>er</strong>vous <a href="javascript:void(0)" onclick="au5.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
+										</span> <h3><i>/ˈnɜːvəs/</i></h3>
 									</div>
 								</div>
 			                  <br> <br>
@@ -538,11 +538,11 @@ body {
 		</div>
 		
 	</div>
-	<audio id="l1Audio1" src="voices/love.level3/early.mp3"></audio>
-	<audio id="l1Audio2" src="voices/love.level3/first.mp3"></audio>
-	<audio id="l1Audio3" src="voices/love.level3/heard.mp3"></audio>
-	<audio id="l1Audio4" src="voices/love.level3/girl.mp3"></audio>
-	<audio id="l1Audio5" src="voices/love.level3/hurt.mp3"></audio>
+	<audio id="l1Audio1" src="voices/love.level5/word.mp3"></audio>
+	<audio id="l1Audio2" src="voices/love.level5/journey.mp3"></audio>
+	<audio id="l1Audio3" src="voices/love.level5/perfect.mp3"></audio>
+	<audio id="l1Audio4" src="voices/love.level5/eternal.mp3"></audio>
+	<audio id="l1Audio5" src="voices/love.level5/nervous.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
 
 	<script type="text/javascript">
@@ -748,7 +748,7 @@ body {
 				} else {
 					switch (screenLevel) {
 					case 1: 
-						if (final_transcript.includes('early')) {
+						if (final_transcript.includes('word')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_1').innerHTML = point;
@@ -759,7 +759,7 @@ body {
 						}
 						break;
 					case 2:
-						if (final_transcript.includes('first')) {
+						if (final_transcript.includes('journey') || final_transcript.includes('Journey')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_2').innerHTML = point;
@@ -770,7 +770,7 @@ body {
 						}
 						break;
 					case 3:
-						if (final_transcript.includes('heard')) {
+						if (final_transcript.includes('perfect')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_3').innerHTML = point;
@@ -781,7 +781,7 @@ body {
 						}
 						break;
 					case 4: 
-						if (final_transcript.includes('girl')) {
+						if (final_transcript.includes('eternal')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_4').innerHTML = point;
@@ -792,7 +792,7 @@ body {
 						}
 						break;
 					case 5:
-						if (final_transcript.includes('hurt')) {
+						if (final_transcript.includes('nervous')) {
 							interimPoint = 10;
 							point += interimPoint;
 							document.getElementById('point_5').innerHTML = point;
@@ -1126,12 +1126,7 @@ body {
 		
 		function sendResults() {
 			var userId = '${userInfo.getUserId()}';
-			var levelId = 3;
-			/*
-			var data = {};
-			data["userId"] = userId;
-			data["levelId"] = userId;
-			data["point"] = point; */
+			var levelId = 5;
 			
 			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
 				userId_c : userId,
