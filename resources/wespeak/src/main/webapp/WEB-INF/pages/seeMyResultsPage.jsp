@@ -26,7 +26,7 @@ body {
 							<div class="col-md-12">
 								<center>
 									<img alt="brief-logo" src="img/brief-logo.png">
-									<h2>Level points: <b>${mrm.getLevelPoints()}</b>/ 70</h2>
+									<h2>Level points: <b>${mrm.getLevelPoints()}</b>/ ${levelPoint }</h2>
 									<h2>Total points: <b>${mrm.getTotalPoints()}</b>/ 730</h2>
 								</center>
 							</div>

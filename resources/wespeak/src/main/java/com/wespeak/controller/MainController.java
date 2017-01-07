@@ -16,15 +16,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.wespeak.dao.LevelDAO;
 import com.wespeak.dao.UserInfoDAO;
 import com.wespeak.model.PronunciationResultsModel;
 import com.wespeak.model.MyResultsModel;
- 
+
 @Controller
 public class MainController {
 	
 	@Autowired
     private UserInfoDAO userInfoDAO;
+	
+	@Autowired
+	private LevelDAO levelDAO;
  
    @RequestMapping(value = { "/", "/homeNotLogin" }, method = RequestMethod.GET)
    public String welcomePage(Model model) {
@@ -190,6 +194,7 @@ public class MainController {
 		   model.addAttribute("mrm", myResultsModel);
 	   }
 	   model.addAttribute("levelId", levelId);
+	   model.addAttribute("levelPoint", levelDAO.getLevelPoint(levelId));
 	   model.addAttribute("title", "WeSpeak | Kết quả của bạn");
 	   System.out.println("Danh Nguyen @" + mrm.getLevelPoints() + " " + mrm.getTotalPoints());
 	   

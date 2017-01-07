@@ -793,7 +793,7 @@ body {
 						break;
 					case 5:
 						if (final_transcript.includes('passionate')) {
-							interimPoint = 10;
+							interimPoint = 20;
 							point += interimPoint;
 							document.getElementById('point_5').innerHTML = point;
 							showInfo_5('info_correct_answer_5');
