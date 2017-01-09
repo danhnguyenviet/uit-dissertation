@@ -3,6 +3,7 @@ package com.wespeak.model;
 public class Courseware {
 	
 	private Integer coursewareId;
+	private String coursewareImagePath;
 	private String coursewareName;
 	private String description;
 	private Integer active;
@@ -15,10 +16,11 @@ public class Courseware {
 		super();
 	}
 	
-	public Courseware(Integer coursewareId, String coursewareName, String description, Integer active,
+	public Courseware(Integer coursewareId, String coursewareImagePath, String coursewareName, String description, Integer active,
 			String coursewarePath, Integer contributorId, String author, Integer numOfView) {
 		super();
 		this.coursewareId = coursewareId;
+		this.coursewareImagePath = coursewareImagePath;
 		this.coursewareName = coursewareName;
 		this.description = description;
 		this.active = active;
@@ -90,6 +92,14 @@ public class Courseware {
 
 	public void setNumOfView(Integer numOfView) {
 		this.numOfView = numOfView;
+	}
+	
+	public String getCoursewareImagePath() {
+		return coursewareImagePath;
+	}
+
+	public void setCoursewareImagePath(String coursewareImagePath) {
+		this.coursewareImagePath = coursewareImagePath;
 	}
 	
 }
