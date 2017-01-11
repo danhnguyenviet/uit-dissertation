@@ -13,8 +13,5 @@
 <script
 	src="js/bootstrap.min.js"></script>
 
-<script src="Francium-voice-master/src/recorder.js"></script>
-<script src="Francium-voice-master/src/Fr.voice.js"></script>
-<script src="Francium-voice-master/js/jquery.js"></script>
-<script src="Francium-voice-master/js/app.js"></script>
+
 </head>
