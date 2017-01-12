@@ -19,7 +19,7 @@ public class Post {
 	}
 
 	public Post(Integer postId, String title, String content, Integer active, Integer authorId,
-			Integer lastModifiedUserId, Date modifiedDate, String briefDescription) {
+			Integer lastModifiedUserId, Date modified, String briefDescription, String postImagePath) {
 		super();
 		this.postId = postId;
 		this.title = title;
@@ -27,8 +27,9 @@ public class Post {
 		this.active = active;
 		this.authorId = authorId;
 		this.lastModifiedUserId = lastModifiedUserId;
-		this.modified = modifiedDate;
+		this.modified = modified;
 		this.briefDescription = briefDescription;
+		this.postImagePath = postImagePath;
 	}
 
 	public Integer getPostId() {

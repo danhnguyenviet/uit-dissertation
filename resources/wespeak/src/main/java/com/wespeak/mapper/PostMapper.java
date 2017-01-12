@@ -18,10 +18,11 @@ public class PostMapper implements RowMapper<Post> {
 		Integer active = rs.getInt("active");
 		Integer authorId = rs.getInt("authorId");
 		Integer lastModifiedUserId = rs.getInt("lastModifiedUserId");
-		Date modifiedDate = rs.getDate("modifiedDate");
+		Date modified = rs.getDate("modified");
 		String briefDescription = rs.getString("briefDescription");
+		String postImagePath = rs.getString("postImagePath");
 
-		return new Post(postId, title, content, active, authorId, lastModifiedUserId, modifiedDate, briefDescription);
+		return new Post(postId, title, content, active, authorId, lastModifiedUserId, modified, briefDescription, postImagePath);
 	}
 
 }
