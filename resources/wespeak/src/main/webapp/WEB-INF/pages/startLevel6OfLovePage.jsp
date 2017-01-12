@@ -94,14 +94,14 @@ body {
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-2">
-										<button class="button disabled one" id="play"> <span
+										<button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 											class="pull-left"> <img src="img/speakerIcon.png"
 												alt="user speaks" style="width: 20%">
 										</span></button>
 									</div>
 									<div class="col-md-2">
 										<button class="button recordButton" id="start_button_1 record"
-											onclick="startButton_1(event)">
+											onclick="startButton_1(event); toggleRecording(this);">
 											<img id="start_img_1" src="img/mic.gif" alt="record" style="width: 60%">
 										</button>
 									</div>
@@ -198,14 +198,14 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <button class="button disabled one" id="play"> <span
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
 			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_2"
-			                           onclick="startButton_2(event)">
+			                           onclick="startButton_2(event); toggleRecording(this);">
 			                        <img id="start_img_2" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
@@ -299,14 +299,14 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <button class="button disabled one" id="play"> <span
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
 			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_3"
-			                           onclick="startButton_3(event)">
+			                           onclick="startButton_3(event); toggleRecording(this);">
 			                        <img id="start_img_3" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
@@ -400,14 +400,14 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <button class="button disabled one" id="play"> <span
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
 			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_4"
-			                           onclick="startButton_4(event)">
+			                           onclick="startButton_4(event); toggleRecording(this);">
 			                        <img id="start_img_4" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
@@ -501,14 +501,14 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <button class="button disabled one" id="play"> <span
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
 			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_5"
-			                           onclick="startButton_5(event)">
+			                           onclick="startButton_5(event); toggleRecording(this);">
 			                        <img id="start_img_5" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
@@ -544,6 +544,7 @@ body {
 	<audio id="l1Audio4" src="voices/love.level6/concern.mp3"></audio>
 	<audio id="l1Audio5" src="voices/love.level6/passionate.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
+	<audio id="userVoice" type="audio/wav"></audio>
 
 	<script type="text/javascript">
 		var point = 0, interimPoint = 0;
@@ -1146,6 +1147,12 @@ body {
 			
 		}
 		
+		function playUserVoice() {
+			var au = document.getElementById('userVoice');
+			if (au.src != null) {
+				au.play();
+			}
+		}
 	</script>
 
 </body>
