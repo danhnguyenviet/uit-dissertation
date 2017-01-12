@@ -105,14 +105,14 @@ body {
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-2">
-										<button class="button disabled one" id="play"> <span
+										<button class="button disabled one" id="play" onclick="playUserVoice()"> <span
 											class="pull-left"> <img src="img/speakerIcon.png"
 												alt="user speaks" style="width: 20%">
 										</span></button>
 									</div>
 									<div class="col-md-2">
 										<button class="button recordButton" id="start_button_1 record"
-											onclick="startButton_1(event)">
+											onclick="startButton_1(event); toggleRecording(this);">
 											<img id="start_img_1" src="img/mic.gif" alt="record" style="width: 60%">
 										</button>
 									</div>
@@ -659,6 +659,7 @@ body {
 	<audio id="l1Audio10" src="voices/love.level1/level1.10.mp3"></audio>
 	<audio id="l1Audio11" src="voices/love.level1/level1.11.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
+	<audio id="userVoice" type="audio/wav"></audio>
 
 	<script type="text/javascript">
 		var point = 0, interimPoint = 0;
@@ -1313,6 +1314,14 @@ body {
 						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					});
 			
+		}
+		
+		function playUserVoice() {
+			alert("Hello");
+			var au = document.getElementById('userVoice');
+			if (au.src != null) {
+				au.play();
+			}
 		}
 		
 	</script>

@@ -13,5 +13,7 @@
 <script
 	src="js/bootstrap.min.js"></script>
 
-
+<script src="voiceRecorder/js/audiodisplay.js"></script>
+<script src="voiceRecorder/js/recorderjs/recorder.js"></script>
+<script src="voiceRecorder/js/main.js"></script>
 </head>
