@@ -70,7 +70,7 @@ body {
 							<div class="form-group">
 							  <label class="col-md-4 control-label" for="textarea">Địa chỉ</label>
 							  <div class="col-md-4">                     
-							    <textarea class="form-control" id="address" name="address" disabled value="${userInfo.getAddress()}"></textarea>
+							    <textarea class="form-control" id="address" name="address" disabled value="${userInfo.getAddress()}">${userInfo.getAddress()}</textarea>
 							  </div>
 							</div>
 							
