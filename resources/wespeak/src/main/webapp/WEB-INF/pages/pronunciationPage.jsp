@@ -30,7 +30,7 @@
                   </div>
                   <div class="panel-body">
                      <div class="row">
-                        <a href="euro-cup-2016.html">
+                        <a href="#">
                            <div class="col-md-6">
                               <img src="img/euro-cup-2016.png" class="img-rounded">
                            </div>
@@ -43,12 +43,12 @@
                      </div>
                      <hr>
                      <div class="row">
-                        <a href="business.html">
+                        <a href="#">
                            <div class="col-md-6">
                               <img src="img/business.png" class="img-rounded">
                            </div>
                         </a>
-                        <a href="travel.html">
+                        <a href="#">
                            <div class="col-md-6">
                               <img src="img/travel.png" class="img-rounded">
                            </div>

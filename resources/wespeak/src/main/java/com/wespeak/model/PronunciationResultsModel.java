@@ -2,27 +2,27 @@ package com.wespeak.model;
 
 public class PronunciationResultsModel {
 	
-	private String username;
+	private Integer userId;
 	private Integer levelId;
-	private Integer points;
+	private Integer point;
 	
 	public PronunciationResultsModel() {
 		super();
 	}
 
-	public PronunciationResultsModel(String username, Integer levelId, Integer points) {
+	public PronunciationResultsModel(Integer userId, Integer levelId, Integer point) {
 		super();
-		this.username = username;
+		this.userId = userId;
 		this.levelId = levelId;
-		this.points = points;
+		this.point = point;
 	}
 
-	public String getUsername() {
-		return username;
+	public Integer getUserId() {
+		return userId;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	public Integer getLevelId() {
@@ -33,12 +33,12 @@ public class PronunciationResultsModel {
 		this.levelId = levelId;
 	}
 
-	public Integer getPoints() {
-		return points;
+	public Integer getPoint() {
+		return point;
 	}
 
-	public void setPoints(Integer points) {
-		this.points = points;
+	public void setPoint(Integer point) {
+		this.point = point;
 	}
 	
 }

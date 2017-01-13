@@ -25,7 +25,6 @@ public class UserInfoMapper implements RowMapper<UserInfo> {
     	Integer active = rs.getInt("Active");
     	Date createdDate = rs.getDate("CreatedDate");
  
-        //return new UserInfo(username, password);
         return new UserInfo(userId, fullname, username, password, gender, dateOfBirth, phone, email, address, avatarPath, userGroupId, active, createdDate);
     }
  

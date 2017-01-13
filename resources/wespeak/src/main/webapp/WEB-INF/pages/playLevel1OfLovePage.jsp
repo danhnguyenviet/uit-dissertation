@@ -3,17 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>${title}</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<%@include file="../pages/templates/head.jsp"%>
 <style>
 body {
 	background: url('img/train-no-text.png') no-repeat center fixed;
@@ -36,7 +26,7 @@ body {
 	visibility: hidden;
 }
 </style>
-</head>
+
 <body>
 	<%@include file="../pages/templates/nav.jsp"%>
 
@@ -105,7 +95,7 @@ body {
 								<div class="row">
 									<div class="col-md-2"></div>
 									<div class="col-md-8">
-										<img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
+										<img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
 											id="text2Level1" style="font-size: 125%"> I am so <u>nervous</u>
 											it <u>hurts</u>.
 										</span> <a href="javascript:void(0)" onclick="au2.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
@@ -115,21 +105,21 @@ body {
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-2">
-										<a href="#" class="button disabled one" id="play"> <span
-											class="pull-left"> <img src="img/speakIcon.png"
+										<button class="button disabled one" id="play" onclick="playUserVoice()"> <span
+											class="pull-left"> <img src="img/speakerIcon.png"
 												alt="user speaks" style="width: 20%">
-										</span></a>
+										</span></button>
 									</div>
 									<div class="col-md-2">
-										<button class="" id="start_button_1"
-											onclick="startButton_1(event)">
+										<button class="button recordButton" id="start_button_1 record"
+											onclick="startButton_1(event); toggleRecording(this);">
 											<img id="start_img_1" src="img/mic.gif" alt="record" style="width: 60%">
 										</button>
 									</div>
 									<div class="col-md-2">
-										<a href="javascript:void(0)" onclick="showScreen('screen_2'); showInfo_2('info_start_2')"> <img
-											src="img/nextIcon.png" alt="next" style="width: 20%">
-										</a>
+										<button onclick="showScreen('screen_2'); showInfo_2('info_start_2')"> <img
+											src="img/newNextIcon.png" alt="next" style="width: 20%">
+										</button>
 									</div>
 									<div class="col-md-3"></div>
 								</div>
@@ -216,7 +206,7 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-2"></div>
 			                     <div class="col-md-8">
-			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
+			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
 			                           id="text4Level1" style="font-size: 125%"> I am going on a <u>first</u> date tonight.
 			                        </span> <a href="javascript:void(0)" onclick="au4.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
@@ -225,21 +215,21 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_2"
-			                           onclick="startButton_2(event)">
+			                           onclick="startButton_2(event); toggleRecording(this);">
 			                        <img id="start_img_2" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_3'); showInfo_3('info_start_3')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_3'); showInfo_3('info_start_3')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -323,7 +313,7 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-2"></div>
 			                     <div class="col-md-8">
-			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
+			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
 			                           id="text6Level1" style="font-size: 125%"> At a party. For me, it was love at <u>first</u> sight.
 			                        </span> <a href="javascript:void(0)" onclick="au6.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
@@ -332,21 +322,21 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_3"
-			                           onclick="startButton_3(event)">
+			                           onclick="startButton_3(event); toggleRecording(this);">
 			                        <img id="start_img_3" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_4'); showInfo_4('info_start_4')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_4'); showInfo_4('info_start_4')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -430,7 +420,7 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-2"></div>
 			                     <div class="col-md-8">
-			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
+			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
 			                           id="text8Level1" style="font-size: 125%"> But I'm <u>concerned</u> about knowing what to say when we are <u>alone</u>.
 			                        </span> <a href="javascript:void(0)" onclick="au8.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
@@ -439,21 +429,21 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_4"
-			                           onclick="startButton_4(event)">
+			                           onclick="startButton_4(event); toggleRecording(this);">
 			                        <img id="start_img_4" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_5'); showInfo_5('info_start_5')"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_5'); showInfo_5('info_start_5')"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -537,7 +527,7 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-2"></div>
 			                     <div class="col-md-8">
-			                        <img src="img/womanIcon.png" alt="woman" style="width: 4%"><span
+			                        <img src="img/greenManIcon.jpg" alt="woman" style="width: 4%"><span
 			                           id="text10Level1" style="font-size: 125%"> I hope so, I want us to be <u>perfect</u> for each other.
 			                        </span> <a href="javascript:void(0)" onclick="au10.play();"><span class="glyphicon glyphicon-volume-up"></span></a>
 			                     </div>
@@ -546,21 +536,21 @@ body {
 			                  <div class="row">
 			                     <div class="col-md-3"></div>
 			                     <div class="col-md-2">
-			                        <a href="#" class="button disabled one" id="play"> <span
-			                           class="pull-left"> <img src="img/speakIcon.png"
+			                        <button class="button disabled one" id="play" onclick="playUserVoice()"> <span
+			                           class="pull-left"> <img src="img/speakerIcon.png"
 			                           alt="user speaks" style="width: 20%">
-			                        </span></a>
+			                        </span></button>
 			                     </div>
 			                     <div class="col-md-2">
 			                        <button class="" id="start_button_5"
-			                           onclick="startButton_5(event)">
+			                           onclick="startButton_5(event); toggleRecording(this);">
 			                        <img id="start_img_5" src="img/mic.gif" alt="record" style="width: 60%">
 			                        </button>
 			                     </div>
 			                     <div class="col-md-2">
-			                        <a href="javascript:void(0)" onclick="showScreen('screen_6');"> <img
-			                           src="img/nextIcon.png" alt="next" style="width: 20%">
-			                        </a>
+			                        <button onclick="showScreen('screen_6');"> <img
+			                           src="img/newNextIcon.png" alt="next" style="width: 20%">
+			                        </button>
 			                     </div>
 			                     <div class="col-md-3"></div>
 			                  </div>
@@ -629,33 +619,9 @@ body {
 			   </div>
 			</div>
 			<!-- end panel 6 -->
-			<!-- Results modal -->
-			<div class="modal fade" id="resultsModal" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Your results</h4>
-					</div>
-					<div class="modal-body">
-					<center>
-						<img alt="logo" src="img/brief-logo.png">
-						<h3>Level points: <b id="levelPoints">60</b>/ 70</h3>
-						<h3>Total points: <b id="totalPoints">60</b>/ 730</h3>
-						</center>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="location.reload();">Play again</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location = '${pageContext.request.contextPath}/love';">Return level 1</button>
-					</div>
-				</div>
-
-			</div>
+			
 		</div>
-		</div>
-
+		
 	</div>
 	<audio id="l1Audio1" src="voices/love.level1/level1.1.mp3"></audio>
 	<audio id="l1Audio2" src="voices/love.level1/level1.2.mp3"></audio>
@@ -669,6 +635,7 @@ body {
 	<audio id="l1Audio10" src="voices/love.level1/level1.10.mp3"></audio>
 	<audio id="l1Audio11" src="voices/love.level1/level1.11.mp3"></audio>
 	<audio id="correctAnswerAudio" src="voices/correctAnswer.mp3"></audio>
+	<audio id="userVoice" type="audio/wav"></audio>
 
 	<script type="text/javascript">
 		var point = 0, interimPoint = 0;
@@ -1304,24 +1271,32 @@ body {
 		}
 		
 		function sendResults() {
-			var username = '${username}';
+			var userId = '${userInfo.getUserId()}';
 			var levelId = 1;
-			alert(username);
-			$.post("/wespeak/updateLevelPoints", {
-				username_c : username,
+			
+			$.post("${pageContext.request.contextPath}/updateLevelPoints", {
+				userId_c : userId,
 				levelId_c : levelId,
 				point_c : point
 			})
 			.done(
 					function(data) {
-						alert("true");
-						window.location.href = "/wespeak/seeMyResults";
+						//alert("true " + userId + " " + levelId + " " + point);
+						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					})
 			.fail(
 					function() {
-						alert("false");
-						
+						//alert("false " + userId + " " + levelId + " " + point);
+						window.location = "${pageContext.request.contextPath}/seeMyResults";
 					});
+			
+		}
+		
+		function playUserVoice() {
+			var au = document.getElementById('userVoice');
+			if (au.src != null) {
+				au.play();
+			}
 		}
 		
 	</script>

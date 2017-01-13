@@ -28,7 +28,7 @@
 			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-cog"></span>
 					<ul class="dropdown-menu">
-						<li><a href="#">Thông tin cơ bản</a></li>
+						<li><a href="${pageContext.request.contextPath}/basicInfo">Thông tin cơ bản</a></li>
 						<li class="divider"></li>
 						<li><a href="${pageContext.request.contextPath}/logout">Thoát</a></li>
 					</ul>

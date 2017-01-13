@@ -4,19 +4,20 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
+import com.wespeak.dao.LevelDAO;
 import com.wespeak.dao.UserInfoDAO;
 import com.wespeak.model.PronunciationResultsModel;
 import com.wespeak.model.Users;
@@ -27,6 +28,7 @@ import com.wespeak.dao.UserDAO;
 import com.wespeak.model.ClassList;
 import com.wespeak.model.CoursewareModel;
 import com.wespeak.model.Post;
+import com.wespeak.model.MyResultsModel;
 
 @Controller
 public class MainController {
@@ -40,6 +42,8 @@ public class MainController {
 	private PostDAO postDAO;
 	@Autowired
 	private UserInfoDAO userInfoDAO;
+	@Autowired
+	private LevelDAO levelDAO;
 
 	@RequestMapping(value = { "/", "/homeNotLogin" }, method = RequestMethod.GET)
 	public String welcomePage(Model model) {
@@ -117,55 +121,101 @@ public class MainController {
 	public String playLevel1OfLovePage(Model model) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
 		model.addAttribute("title", "WeSpeak | Level 1: First date");
 
 		return "playLevel1OfLovePage";
 	}
 
+	@RequestMapping(value = "/startLevel2OfLove", method = RequestMethod.GET)
+	public String startLevel2OfLovePage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+		model.addAttribute("title", "WeSpeak | Level 2: Word stress");
+
+		return "startLevel2OfLovePage";
+	}
+
+	@RequestMapping(value = "/startLevel3OfLove", method = RequestMethod.GET)
+	public String startLevel3OfLovePage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+		model.addAttribute("title", "WeSpeak | Level 3: Early gets the girl");
+
+		return "startLevel3OfLovePage";
+	}
+
+	@RequestMapping(value = "/startLevel4OfLove", method = RequestMethod.GET)
+	public String startLevel4OfLovePage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+		model.addAttribute("title", "WeSpeak | Level 4: Sentence stress");
+
+		return "startLevel4OfLovePage";
+	}
+
+	@RequestMapping(value = "/startLevel5OfLove", method = RequestMethod.GET)
+	public String startLevel5OfLovePage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+		model.addAttribute("title", "WeSpeak | Level 5: Journey for two");
+
+		return "startLevel5OfLovePage";
+	}
+
+	@RequestMapping(value = "/startLevel6OfLove", method = RequestMethod.GET)
+	public String startLevel6OfLovePage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("userInfo", userInfoDAO.findUserInfo(auth.getName()));
+		model.addAttribute("title", "WeSpeak | Level 6: You're ont alone");
+
+		return "startLevel6OfLovePage";
+	}
+
+	@RequestMapping(value = "/updateLevelPoints", method = RequestMethod.POST)
+	public RedirectView updateProductInfo(ModelMap model, @RequestParam(value = "userId_c") Integer userId_c,
+			@RequestParam(value = "levelId_c") Integer levelId_c, @RequestParam(value = "point_c") Integer point_c,
+			RedirectAttributes rAttr) throws Exception {
+
+		PronunciationResultsModel prm = new PronunciationResultsModel(userId_c, levelId_c, point_c);
+		try {
+			userInfoDAO.updatePronuncitaionResults(prm);
+		} catch (Exception e) {
+			System.out.println("My error: " + e);
+		}
+		MyResultsModel mrm = new MyResultsModel(point_c, userInfoDAO.getTotalPoints(userId_c));
+		rAttr.addFlashAttribute("mrm", mrm);
+		rAttr.addFlashAttribute("levelId", levelId_c);
+		System.out.println("Danh Nguyen " + userId_c + " " + levelId_c + " " + point_c + " "
+				+ userInfoDAO.getTotalPoints(userId_c));
+
+		return new RedirectView("redirect:seeMyResults");
+	}
+
 	@RequestMapping(value = "/seeMyResults", method = RequestMethod.GET)
-	public String seeMyResults(Model model) {
+	public String seeMyResults(Model model, @ModelAttribute(value = "mrm") final MyResultsModel mrm,
+			@ModelAttribute(value = "levelId") final Integer levelId) {
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		model.addAttribute("username", auth.getName());
-
+		if (!mrm.equals(null)) {
+			MyResultsModel myResultsModel = new MyResultsModel(mrm.getLevelPoints(), mrm.getTotalPoints());
+			model.addAttribute("mrm", myResultsModel);
+		}
+		model.addAttribute("levelId", levelId);
+		model.addAttribute("levelPoint", levelDAO.getLevelPoint(levelId));
 		model.addAttribute("title", "WeSpeak | Kết quả của bạn");
+		System.out.println("Danh Nguyen @" + mrm.getLevelPoints() + " " + mrm.getTotalPoints());
 
 		return "seeMyResultsPage";
 	}
 
-	@RequestMapping(value = "/updateLevelPoints", method = RequestMethod.POST)
-	public ModelAndView updateLevelPoints(Model model, HttpServletRequest request, HttpServletResponse response,
-			@RequestParam(value = "username") String username_c, @RequestParam(value = "levelId") Integer levelId_c,
-			@RequestParam(value = "point") Integer point_c) throws Exception {
-
-		PronunciationResultsModel prm = new PronunciationResultsModel(username_c, levelId_c, point_c);
-		userInfoDAO.savePronuncitaionResults(prm);
-
-		return new ModelAndView("redirect:/seeMyResults");
-	}
 	// ===== End of pronunciation =====
-
-	@RequestMapping(value = "/userInfo", method = RequestMethod.GET)
-	public String userInfo(Model model, Principal principal) {
-
-		// Sau khi user login thanh cong se co principal
-		String userName = principal.getName();
-		System.out.println("User Name: " + userName);
-
-		return "userInfoPage";
-	}
-
-	@RequestMapping(value = "/403", method = RequestMethod.GET)
-	public String accessDenied(Model model, Principal principal) {
-
-		if (principal != null) {
-			model.addAttribute("message",
-					"Hi " + principal.getName() + "<br> You do not have permission to access this page!");
-		} else {
-			model.addAttribute("msg", "You do not have permission to access this page!");
-		}
-		return "403Page";
-	}
 
 	// ===== Begin of ClassList =====
 	@RequestMapping(value = "/classList", method = RequestMethod.GET)
@@ -230,7 +280,7 @@ public class MainController {
 			else
 				for (int i = 0; i < 4; i++)
 					listImportant.add(list.get(i));
-			
+
 			model.addAttribute("postListImportant", listImportant);
 		}
 		return "postsPage";
@@ -241,10 +291,10 @@ public class MainController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		model.addAttribute("username", auth.getName());
 		model.addAttribute("title", "WeSpeak | Xem bài viết kinh nghiệm");
-		
+
 		Post list = postDAO.findPost(id);
 		model.addAttribute("postModel", list);
-		
+
 		List<Post> listModel = postDAO.listPost();
 		if (listModel != null) {
 			List<Post> listImportant = new ArrayList<Post>();
@@ -254,70 +304,92 @@ public class MainController {
 			else
 				for (int i = 0; i < 4; i++)
 					listImportant.add(listModel.get(i));
-			
+
 			model.addAttribute("postListImportant", listImportant);
 		}
-		
+
 		return "postDetailPage";
 	}
 	// ===== End of posts =====
-	
-	
+
 	// ===== Begin of admin checkPostPage=====
-		@RequestMapping(value = "/checkPost", method = RequestMethod.GET)
-		public String checkPostPage(Model model) {
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			model.addAttribute("username", auth.getName());
-			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+	@RequestMapping(value = "/checkPost", method = RequestMethod.GET)
+	public String checkPostPage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
 
-			//find the post are active=0
-			List<Post> list = postDAO.listPostActive(0);
-			model.addAttribute("postModel", list);
-			return "checkPostPage";
+		// find the post are active=0
+		List<Post> list = postDAO.listPostActive(0);
+		model.addAttribute("postModel", list);
+		return "checkPostPage";
+	}
+
+	@RequestMapping(value = "/checkPostOK", method = RequestMethod.GET)
+	public String checkPostOK(Model model, @RequestParam(value = "id") Integer id) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+		// update active = 1
+		postDAO.updatePostActive(id, 1);
+
+		// find the post are active=0
+		List<Post> list = postDAO.listPostActive(0);
+		model.addAttribute("postModel", list);
+		return "checkPostPage";
+	}
+
+	@RequestMapping(value = "/checkPostCancel", method = RequestMethod.GET)
+	public String checkPostCancel(Model model, @RequestParam(value = "id") Integer id) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+		// update active = -1
+		postDAO.updatePostActive(id, -1);
+
+		// find the post are active=0
+		List<Post> list = postDAO.listPostActive(0);
+		model.addAttribute("postModel", list);
+		return "checkPostPage";
+	}
+	// ===== End of admin checkPostPage=====
+
+	// ===== Start of admin checkPostPage=====
+	@RequestMapping(value = "/managerUser", method = RequestMethod.GET)
+	public String managerUser(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("title", "WeSpeak | Quản lý tài khoản");
+
+		List<Users> list = userDAO.listUser();
+		model.addAttribute("userModel", list);
+
+		return "managerUserPage";
+	}
+	// ===== End of admin checkPostPage=====
+
+	@RequestMapping(value = "/userInfo", method = RequestMethod.GET)
+	public String userInfo(Model model, Principal principal) {
+
+		// Sau khi user login thanh cong se co principal
+		String userName = principal.getName();
+		System.out.println("User Name: " + userName);
+
+		return "userInfoPage";
+	}
+
+	@RequestMapping(value = "/403", method = RequestMethod.GET)
+	public String accessDenied(Model model, Principal principal) {
+
+		if (principal != null) {
+			model.addAttribute("message",
+					"Hi " + principal.getName() + "<br> You do not have permission to access this page!");
+		} else {
+			model.addAttribute("msg", "You do not have permission to access this page!");
 		}
-		
-		@RequestMapping(value = "/checkPostOK", method = RequestMethod.GET)
-		public String checkPostOK(Model model, @RequestParam(value = "id") Integer id) {
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			model.addAttribute("username", auth.getName());
-			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+		return "403Page";
+	}
 
-			// update active = 1
-			postDAO.updatePostActive(id, 1);
-			
-			//find the post are active=0
-			List<Post> list = postDAO.listPostActive(0);
-			model.addAttribute("postModel", list);
-			return "checkPostPage";
-		}
-		
-		@RequestMapping(value = "/checkPostCancel", method = RequestMethod.GET)
-		public String checkPostCancel(Model model, @RequestParam(value = "id") Integer id) {
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			model.addAttribute("username", auth.getName());
-			model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
-
-			// update active = -1
-			postDAO.updatePostActive(id, -1);
-						
-			//find the post are active=0
-			List<Post> list = postDAO.listPostActive(0);
-			model.addAttribute("postModel", list);
-			return "checkPostPage";
-		}
-		// ===== End of admin checkPostPage=====
-		
-		// ===== Start of admin checkPostPage=====
-		@RequestMapping(value = "/managerUser", method = RequestMethod.GET)
-		public String managerUser(Model model) {
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			model.addAttribute("username", auth.getName());
-			model.addAttribute("title", "WeSpeak | Quản lý tài khoản");
-
-			List<Users> list = userDAO.listUser();
-			model.addAttribute("userModel", list);
-
-			return "managerUserPage";
-		}
-		// ===== End of admin checkPostPage=====
 }

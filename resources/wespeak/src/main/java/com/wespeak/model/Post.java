@@ -80,11 +80,11 @@ public class Post {
 		this.lastModifiedUserId = lastModifiedUserId;
 	}
 
-	public Date getModifiedDate() {
+	public Date getModified() {
 		return modified;
 	}
 
-	public void setModifiedDate(Date modifiedDate) {
+	public void setModified(Date modifiedDate) {
 		this.modified = modifiedDate;
 	}
 
@@ -103,5 +103,4 @@ public class Post {
 	public void setPostImagePath(String postImagePath) {
 		this.postImagePath = postImagePath;
 	}
-	
 }

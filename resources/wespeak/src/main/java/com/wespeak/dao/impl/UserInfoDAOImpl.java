@@ -24,8 +24,7 @@ public class UserInfoDAOImpl extends JdbcDaoSupport implements UserInfoDAO {
 	}
 
 	public UserInfo findUserInfo(String userName) {
-		// String sql = "Select u.Username,u.Password "//
-		// + " from Users u where u.Username = ? ";
+		
 		String sql = "Select * "//
 				+ " from Users u where u.Username = ? ";
 
@@ -65,19 +64,52 @@ public class UserInfoDAOImpl extends JdbcDaoSupport implements UserInfoDAO {
 	}
 
 	@Override
-	public void savePronuncitaionResults(PronunciationResultsModel prm) {
+	public boolean updatePronuncitaionResults(PronunciationResultsModel prm) {
 		
 		String sql = "UPDATE userscoredetails usd "
                 + " inner join userscores us on us.UserScoreId=usd.UserScoreId "
-				+ " inner join users u on u.UserId=us.UserId "
-                + " where u.Username=? and usd.LevelId=? "
-				+ " set usd.Scores=?";
-		Object[] params = new Object[] { prm.getUsername(), prm.getLevelId(), prm.getPoints() };
+                + " inner join users u on u.UserId=us.UserId "
+                + " set usd.Scores=? "
+                + " where u.UserId=? and usd.LevelId=? ";
+				
+		/*String sql = "UPDATE userscoredetails usd "
+				+ " set usd.Scores=? "
+                + " where usd.UserScoreDetailId=1";*/
+		String sqlSum = "update userscores us, "
+				+ " (select sum(usd.Scores) as sumAttr "
+				+ " from Userscoredetails usd "
+				+ " inner join userscores us on us.UserScoreId=usd.UserScoreId "
+				+ " where us.UserId=?) as a "
+				+ " set us.Scores=a.sumAttr "
+				+ " where us.UserId=?";
+		
+		Object[] params = new Object[] { prm.getPoint(), prm.getUserId(), prm.getLevelId() };
+		Object[] paramsSum = new Object[] { prm.getUserId(), prm.getUserId() };
+		//Object[] params = new Object[] { prm.getPoint() };
+		
 		try {
 			this.getJdbcTemplate().update(sql, params);
-		} catch (Exception e) {
-			return;
+			this.getJdbcTemplate().update(sqlSum, paramsSum);
+		} catch (RuntimeException e) {
+			return false;
 		}
-		
+		return true;
 	}
+
+	@Override
+	public Integer getTotalPoints(Integer userId) {
+
+		String sql = "Select us.Scores "//
+				+ " from UserScores us where us.UserId=?";
+
+		Object[] params = new Object[] { userId };
+		
+		try {
+			Integer totalPoints = this.getJdbcTemplate().queryForObject(sql, params, Integer.class);
+			return totalPoints;
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+
 }

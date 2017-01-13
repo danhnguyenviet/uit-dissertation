@@ -37,20 +37,28 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		// Các trang không yêu cầu login
 		http.authorizeRequests().antMatchers(
 				"/", 
-				"/welcome", 
 				"/login", 
 				"/logout", 
 				"/homeNotLogin",
 				"/register").permitAll();
 
-		// Trang /userInfo yêu cầu phải login với vai trò USER hoặc ADMIN.
 		// Nếu chưa login, nó sẽ redirect tới trang /login.
 		http.authorizeRequests().antMatchers(
 				"/home",
 				"/classList",
 				"/pronunciation",
 				"/courseware",
-				"/posts").access("hasAnyRole('ROLE_TEACHER', 'ROLE_STUDENT', 'ROLE_SUBADMIN', 'ROLE_ADMIN')");
+				"/posts",
+				"/love",
+				"/playLevel1OfLove",
+				"/listenLevel1OfLove",
+				"/startLevel2OfLove",
+				"/startLevel3OfLove",
+				"/startLevel4OfLove",
+				"/startLevel5OfLove",
+				"/startLevel6OfLove",
+				"/seeMyResults",
+				"/basicInfo").access("hasAnyRole('ROLE_TEACHER', 'ROLE_STUDENT', 'ROLE_SUBADMIN', 'ROLE_ADMIN')");
 
 		// For ADMIN only.
 		// Trang chỉ dành cho ADMIN
