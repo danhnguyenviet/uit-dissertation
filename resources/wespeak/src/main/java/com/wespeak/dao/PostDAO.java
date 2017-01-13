@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import com.wespeak.mapper.PostMapper;
 import com.wespeak.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Service;
@@ -71,6 +72,50 @@ public class PostDAO extends JdbcDaoSupport {
 			this.getJdbcTemplate().update(sql);
 		} catch (EmptyResultDataAccessException e) {
 			return;
+		}
+	}
+	
+	public List<Post> findAllPostsByUsername(String username) {
+		 String sql = "select p.PostId, p.Title, p.Content, p.Active, p.AuthorId, p.LastModifiedUserId, "
+		 + " p.Modified, p.BriefDescription, p.PostImagePath "
+		 + " from posts p, users u where u.UserId=p.AuthorId and u.Username=?";
+
+		Object[] args = new Object[] { username };
+		PostMapper mapper = new PostMapper();
+		try {
+			List<Post> postList = this.getJdbcTemplate().query(sql, args, mapper);
+			return postList;
+		} catch (DataAccessException e) {
+			System.out.println(e.toString());
+			return null;
+		}
+	}
+	
+	public void deletePostById(Integer postId) {
+		String sql = "DELETE FROM posts WHERE PostId = ?";
+		
+		Object[] args = new Object[] { postId };
+		try {
+			this.getJdbcTemplate().update(sql, args);
+		} catch (RuntimeException runtimeException) {
+			System.err.println("***NagiosHostDao::deleteObject, RuntimeException occurred, message follows.");
+	        System.err.println(runtimeException);
+	        throw runtimeException;
+		}
+	}
+	
+	public void savePost(Post post) {
+		String sql = "INSERT INTO posts (`PostId`, `Title`, `Content`, `Active`, `AuthorId`, `LastModifiedUserId`, `Modified`, `BriefDescription`, `PostImagePath`) "
+				+ " VALUES (NULL, ?, ?, 0, ?, ?, ?, NULL, ?);";
+		
+		Object[] args = new Object[] { post.getTitle(), post.getContent(), post.getAuthorId(),
+				post.getLastModifiedUserId(), post.getModified(), post.getPostImagePath()};
+		
+		try {
+			this.getJdbcTemplate().update(sql, args);
+		} catch (RuntimeException runtimeException) {
+	        System.err.println(runtimeException);
+	        throw runtimeException;
 		}
 	}
 }

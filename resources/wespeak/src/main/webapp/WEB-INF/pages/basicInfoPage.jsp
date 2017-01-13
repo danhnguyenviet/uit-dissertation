@@ -107,7 +107,10 @@ body {
 							</fieldset>
 							</form>
 					</div>
+					<%List<Post> postList = (List<Post>) request.getAttribute("postList"); %>
 					<div id="postManagement" class="tab-pane fade">
+						<br>
+						<button class="btn btn-success" onclick="window.location='${pageContext.request.contextPath}/addPost'">Thêm bài viết</button>
 						<br>
 						<table class="table table-hover">
 						    <thead>
@@ -115,18 +118,18 @@ body {
 						        <th>Tên bài viết</th>
 						        <th>Ngày đăng</th>
 						        <th></th>
+						        <th></th>
 						      </tr>
 						    </thead>
 						    <tbody>
 						    <%
-							    //List<String> postList = (List<String>) request.getAttribute("postList");
-							    //for (int i = 0; i < postList.size(); i++) { %>
+							    if (!postList.equals(null)) {
+							    	for (int i = 0; i < postList.size(); i++) { %>
 							      <tr>
-							        <td>${postList.getTitle()}</td>
-							        <td>${postList.getModified()}</td>
+							        <td><%=postList.get(i).getTitle() %></td>
+							        <td><%=postList.get(i).getModified() %></td>
 							        <td><a
-										href="#"
-										onclick="viewPost()"
+										href="postDetail?id=<%=postList.get(i).getPostId() %>" target="blank"
 										title="edit"><i class="glyphicon glyphicon-eye-open"></i></a>&nbsp;&nbsp;
 							        <a
 										href="#"
@@ -134,10 +137,16 @@ body {
 										title="edit"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;
 									<a href="" data-toggle="modal"
 										title="delete"
-										onclick="deletePost()"><i
+										onclick="deletePostById(<%=postList.get(i).getPostId()%>)"><i
 											class="glyphicon glyphicon-trash"></i></a></td>
+									<%if (postList.get(i).getActive()==0) { %>
+									<td><span class="badge">Đang duyệt</span></td>
+									<%} else { %>
+									<td><span class="badge"></span></td>
+									<%} %>
 							      </tr>
-							      
+							      <%}
+							    }%>
 						    </tbody>
 						    
 						  </table>
@@ -151,6 +160,9 @@ body {
 				
 			</div>
 		</div>
+		
+		<!-- Delete confirm modal -->
+		
 	</div>
 	<!-- End of container -->
 	<script>
@@ -160,6 +172,13 @@ body {
 		    });
 		});
 		
+		function deletePostById (id) {
+			if (confirm('Bạn muốn xóa bài viết này?')) {
+				window.location.href = "deletePost?postId=" + id;
+			} else {
+			    // Do nothing!
+			}
+		}
 	</script>
 </body>
 </html>

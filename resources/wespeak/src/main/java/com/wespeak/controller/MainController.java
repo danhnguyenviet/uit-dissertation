@@ -4,6 +4,8 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -178,7 +180,7 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/updateLevelPoints", method = RequestMethod.POST)
-	public RedirectView updateProductInfo(ModelMap model, @RequestParam(value = "userId_c") Integer userId_c,
+	public RedirectView updateLevelPoints(ModelMap model, @RequestParam(value = "userId_c") Integer userId_c,
 			@RequestParam(value = "levelId_c") Integer levelId_c, @RequestParam(value = "point_c") Integer point_c,
 			RedirectAttributes rAttr) throws Exception {
 
@@ -310,6 +312,7 @@ public class MainController {
 
 		return "postDetailPage";
 	}
+	
 	// ===== End of posts =====
 
 	// ===== Begin of admin checkPostPage=====
