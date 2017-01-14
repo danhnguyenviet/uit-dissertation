@@ -1,5 +1,8 @@
 package com.wespeak.dao;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -108,8 +111,10 @@ public class PostDAO extends JdbcDaoSupport {
 		String sql = "INSERT INTO posts (`PostId`, `Title`, `Content`, `Active`, `AuthorId`, `LastModifiedUserId`, `Modified`, `BriefDescription`, `PostImagePath`) "
 				+ " VALUES (NULL, ?, ?, 0, ?, ?, ?, NULL, ?);";
 		
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = new Date();
 		Object[] args = new Object[] { post.getTitle(), post.getContent(), post.getAuthorId(),
-				post.getLastModifiedUserId(), post.getModified(), post.getPostImagePath()};
+				post.getLastModifiedUserId(), dateFormat.format(date), post.getPostImagePath()};
 		
 		try {
 			this.getJdbcTemplate().update(sql, args);

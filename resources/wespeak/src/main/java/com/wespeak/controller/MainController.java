@@ -4,8 +4,6 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -66,6 +64,16 @@ public class MainController {
 
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminPage(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("username", auth.getName());
+		model.addAttribute("title", "WeSpeak | Duyệt bài viết kinh nghiệm");
+
+		// find the post are active=0
+		List<Post> list = postDAO.listPostActive(0);
+		model.addAttribute("postModel", list);
+		List<Users> list1 = userDAO.listUser();
+		model.addAttribute("userModel", list1);
+		
 		return "adminPage";
 	}
 
@@ -394,5 +402,5 @@ public class MainController {
 		}
 		return "403Page";
 	}
-
+	
 }

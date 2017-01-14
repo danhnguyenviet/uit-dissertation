@@ -110,7 +110,7 @@ body {
 					<%List<Post> postList = (List<Post>) request.getAttribute("postList"); %>
 					<div id="postManagement" class="tab-pane fade">
 						<br>
-						<button class="btn btn-success" onclick="window.location='${pageContext.request.contextPath}/addPost'">Thêm bài viết</button>
+						<!-- <button class="btn btn-success" onclick="window.location='${pageContext.request.contextPath}/addPost'">Thêm bài viết</button>  -->
 						<br>
 						<table class="table table-hover">
 						    <thead>
@@ -131,10 +131,6 @@ body {
 							        <td><a
 										href="postDetail?id=<%=postList.get(i).getPostId() %>" target="blank"
 										title="edit"><i class="glyphicon glyphicon-eye-open"></i></a>&nbsp;&nbsp;
-							        <a
-										href="#"
-										onclick="editPost()"
-										title="edit"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;
 									<a href="" data-toggle="modal"
 										title="delete"
 										onclick="deletePostById(<%=postList.get(i).getPostId()%>)"><i
@@ -151,10 +147,45 @@ body {
 						    
 						  </table>
 					</div>
+					<%List<CoursewareModel> coursewareList = (List<CoursewareModel>) request.getAttribute("coursewareList"); %>
 					<div id="coursewareManagement" class="tab-pane fade">
-						<h3>Menu 2</h3>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit
-							voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						<br>
+						<!-- <button class="btn btn-success" onclick="window.location='${pageContext.request.contextPath}/addPost'">Thêm bài viết</button>  -->
+						<br>
+						<table class="table table-hover">
+						    <thead>
+						      <tr>
+						        <th>Tên học liệu</th>
+						        <th>Tên tác giả</th>
+						        <th></th>
+						        <th></th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						    <%
+							    if (!coursewareList.equals(null)) {
+							    	for (int i = 0; i < coursewareList.size(); i++) { %>
+							      <tr>
+							        <td><%=coursewareList.get(i).getCoursewareName() %></td>
+							        <td><%=coursewareList.get(i).getAuthor() %></td>
+							        <td><a
+										href="coursewareDetail?id=<%=coursewareList.get(i).getCoursewareId() %>" target="blank"
+										title="edit"><i class="glyphicon glyphicon-eye-open"></i></a>&nbsp;&nbsp;
+									<a href="" data-toggle="modal"
+										title="delete"
+										onclick="deleteCoursewareById(<%=coursewareList.get(i).getCoursewareId()%>)"><i
+											class="glyphicon glyphicon-trash"></i></a></td>
+									<%if (coursewareList.get(i).getActive()==0) { %>
+									<td><span class="badge">Đang duyệt</span></td>
+									<%} else { %>
+									<td><span class="badge"></span></td>
+									<%} %>
+							      </tr>
+							      <%}
+							    }%>
+						    </tbody>
+						    
+						  </table>
 					</div>
 				</div>
 				
@@ -175,6 +206,14 @@ body {
 		function deletePostById (id) {
 			if (confirm('Bạn muốn xóa bài viết này?')) {
 				window.location.href = "deletePost?postId=" + id;
+			} else {
+			    // Do nothing!
+			}
+		}
+		
+		function deleteCoursewareById(id) {
+			if (confirm('Bạn muốn xóa học liệu này?')) {
+				window.location.href = "deleteCourseware?coursewareId=" + id;
 			} else {
 			    // Do nothing!
 			}

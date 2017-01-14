@@ -15,7 +15,7 @@
 </head>
 <style>
 body {
-	background: url('img/train.png') no-repeat center fixed;
+	background: url('img/train-no-text.png') no-repeat center fixed;
 	background-size: cover;
 }
 </style>
@@ -26,24 +26,24 @@ body {
 			<div class="panel-heading">Thêm bài viết</div>
 			<div class="panel-body">
 				<form class="form-horizontal" role="form" id="insertPostForm" action="savePost" method="POST"
-							enctype="multipart/form-data" onsubmit="sendPost()">
+							enctype=”multipart/form-data” onsubmit="sendPost()">
 					<div class="form-group">
-						<label for="title" class="col-sm-2 control-label">Tiêu đề</label>
+						<label for="title_c" class="col-sm-2 control-label">Tiêu đề</label>
 						<div class="col-sm-10">
-							<input type="text" id="title" name="title" placeholder="Tiêu đề"
+							<input type="text" id="title_c" name="title" placeholder="Tiêu đề"
 								class="form-control" autofocus required>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="content" class="col-sm-2 control-label">Nội dung</label>
+						<label for="content_c" class="col-sm-2 control-label">Nội dung</label>
 						<div class="col-sm-10">
-							<textarea id="content" name="content" class="form-control"></textarea>
+							<textarea id="content_c" name="content" class="form-control"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="image" class="col-sm-2 control-label">Ảnh bài viết</label>
+						<label for="image_c" class="col-sm-2 control-label">Ảnh bài viết</label>
 						<div class="col-sm-10">
-							<input type="file" id="image" class="form-control">
+							<input type="file" id="image_c" name="image" class="form-control">
 						</div>
 					</div>
 					
@@ -63,27 +63,26 @@ body {
        // Replace the <textarea id="editor1"> with a CKEditor
        // instance, using default configuration.
        CKEDITOR.replace( 'content' );
-       
-       var title = document.getElementById("title").value;
-       var content = document.getElementById("content").value;
-       var image = document.getElementById("image").value;
-       
+
        function sendPost() {
-    	   $.post("${pageContext.request.contextPath}/saveproductinfo", {
+    	   var title = document.getElementById("title_c").value;
+           var content = document.getElementById("content_c").value;
+           var image = document.getElementById("image_c").value;
+           
+    	   $.post("${pageContext.request.contextPath}/savePost", {
 				title_c : title,
 				content_c : content,
 				image_c : image
 			})
 			.done(
 					function(data) {
-						alert("true");
-						window.location.href = "${pageContext.request.contextPath}/basicInfo";
-						
+						//alert("true " + userId + " " + levelId + " " + point);
+						window.location = "${pageContext.request.contextPath}/basicInfo";
 					})
 			.fail(
 					function() {
-						alert("false");
-						
+						//alert("false " + userId + " " + levelId + " " + point);
+						window.location = "${pageContext.request.contextPath}/basicInfo";
 					});
        }
    	</script>
