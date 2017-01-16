@@ -1,7 +1,9 @@
 package com.wespeak.controller;
 
 import java.security.Principal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +75,7 @@ public class MainController {
 		model.addAttribute("postModel", list);
 		List<Users> list1 = userDAO.listUser();
 		model.addAttribute("userModel", list1);
-		
+
 		return "adminPage";
 	}
 
@@ -241,6 +243,10 @@ public class MainController {
 
 		model.addAttribute("title", "Danh sách lớp");
 
+		Date dNow = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat("HH");
+		model.addAttribute("currentDate",ft.format(dNow));
+
 		return "classlistPage";
 	}
 	// ===== End of ClassList =====
@@ -320,7 +326,7 @@ public class MainController {
 
 		return "postDetailPage";
 	}
-	
+
 	// ===== End of posts =====
 
 	// ===== Begin of admin checkPostPage=====
@@ -402,5 +408,5 @@ public class MainController {
 		}
 		return "403Page";
 	}
-	
+
 }

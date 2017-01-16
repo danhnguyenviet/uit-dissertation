@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="java.io.*,java.util.*"%>
+<%@ page import="javax.servlet.*,java.text.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,15 +72,22 @@ body {
 									<div class="col-md-1">
 										<img src="img/brief-logo.png" class="img-rounded">
 									</div>
-									
+
 									<div class="col-md-9">
 										<strong>${dept.className}</strong><br> <i>${dept.startDate}-${dept.endDate}</i><br>
 										<strong>Giáo viên:</strong> ${dept.fullName}
 									</div>
 									<div class="col-md-2">
-										<button type="button" class="btn btn-primary"
-											onclick="newPage('${dept.className}${dept.classId}')">Vào
-											học</button>
+										<c:if test="${currentDate < dept.startDate}">
+											<button type="button" class="btn btn-primary"
+												onclick="newPage('${dept.className}${dept.classId}')">Vào
+												học</button>
+										</c:if>
+										<c:if test="${currentDate >= dept.startDate}">
+											<button disabled type="button" class="btn btn-primary"
+												onclick="newPage('${dept.className}${dept.classId}')">Vào
+												học</button>
+										</c:if>
 									</div>
 								</a>
 							</div>
@@ -97,8 +106,8 @@ body {
 			</div>
 		</div>
 	</div>
-<div id="userGroup" class="hidden">${groupUser }</div>
-<div id="userName" class="hidden">${name }</div>
+	<div id="userGroup" class="hidden">${groupUser }</div>
+	<div id="userName" class="hidden">${name }</div>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
